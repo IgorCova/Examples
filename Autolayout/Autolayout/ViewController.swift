@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  UiAutoLayout
+//  Autolayout
 //
-//  Created by Jin-Mac on 29.09.15.
+//  Created by Jin-Mac on 30.09.15.
 //  Copyright © 2015 Igor Cova. All rights reserved.
 //
 
