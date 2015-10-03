@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         self.setUpRedactor()
+        self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.None
         //self.myTableView.delegate = self
         //self.myTableView.dataSource = self
         
@@ -67,6 +68,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let redact = arrayOfRedactors[indexPath.row]
         
         cell.setCell(redact.community, rightLabelText: redact.name, imageName: redact.imageName)
+        
+        
+        
         
         return cell
     }

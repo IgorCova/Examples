@@ -15,8 +15,8 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var rightLabel: UILabel!
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+        super.awakeFromNib()        
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
