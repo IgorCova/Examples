@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContentTile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="263" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="snU-jK-Hak">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="nVi-B5-eva"/>
+                                    <constraint firstAttribute="height" constant="548" id="uZk-fp-8M7"/>
+                                </constraints>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="263" id="RyN-YJ-wdd" customClass="TableViewCell" customModule="ContentTile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="263"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RyN-YJ-wdd" id="6ab-lv-dqs">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="262"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpA-We-PbZ">
+                                                    <rect key="frame" x="5" y="10" width="310" height="232"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="310" id="zQH-2q-1o9"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="rpA-We-PbZ" secondAttribute="trailing" constant="5" id="GnM-iL-2Mc"/>
+                                                <constraint firstAttribute="bottom" secondItem="rpA-We-PbZ" secondAttribute="bottom" constant="20" id="bPc-d3-YBR"/>
+                                                <constraint firstItem="rpA-We-PbZ" firstAttribute="top" secondItem="6ab-lv-dqs" secondAttribute="top" constant="10" id="fqO-hN-eUO"/>
+                                                <constraint firstItem="rpA-We-PbZ" firstAttribute="leading" secondItem="6ab-lv-dqs" secondAttribute="leading" constant="5" id="tgs-r4-Y8Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="rpA-We-PbZ" firstAttribute="centerY" secondItem="RyN-YJ-wdd" secondAttribute="centerY" id="85K-gy-Wod"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Qn5-dw-52J"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="D7Q-ZM-gWk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="snU-jK-Hak" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2JE-Ve-x9o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="snU-jK-Hak" secondAttribute="trailing" constant="-11" id="9cm-c5-ctf"/>
+                            <constraint firstItem="snU-jK-Hak" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KbR-Xt-OjO"/>
+                            <constraint firstItem="snU-jK-Hak" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Of2-BA-BsX"/>
+                            <constraint firstItem="snU-jK-Hak" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SL9-Q7-f06"/>
+                            <constraint firstAttribute="trailing" secondItem="snU-jK-Hak" secondAttribute="trailing" id="Utk-Iy-r20"/>
+                            <constraint firstItem="snU-jK-Hak" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="WES-BB-uEO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="snU-jK-Hak" secondAttribute="bottom" id="dlf-FM-XTf"/>
+                            <constraint firstItem="snU-jK-Hak" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="f08-ow-8y8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9cm-c5-ctf"/>
+                                <exclude reference="KbR-Xt-OjO"/>
+                                <exclude reference="Utk-Iy-r20"/>
+                                <exclude reference="f08-ow-8y8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myTableView" destination="snU-jK-Hak" id="Spf-86-OD0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="444"/>
+        </scene>
+    </scenes>
+</document>
