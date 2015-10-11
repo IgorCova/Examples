@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.setUpRedactor()
         self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        q    }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
