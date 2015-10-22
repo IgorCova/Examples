@@ -65,20 +65,25 @@ class randomListTableViewController: UITableViewController {
     */
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let plusButton = UITableViewRowAction(style: .Normal, title: "EmptyParam") { (actiion: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
+            // То что делает кнопка
+        }
+        plusButton.backgroundColor = UIColor.orangeColor()
+        
         if ((indexPath.row) % 2) == 1 {
             let customDelete = UITableViewRowAction(style: .Normal, title: "            ") { (actiion: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
                 self.randomArray.removeAtIndex(indexPath.row)
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             }
             customDelete.backgroundColor = UIColor(patternImage: UIImage(named: "2.png")!)
-            return [customDelete]
+            return [customDelete, plusButton]
         }else{
             let customDelete = UITableViewRowAction(style: .Normal, title: "Rospin") { (actiion: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
                 self.randomArray.removeAtIndex(indexPath.row)
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             }
             customDelete.backgroundColor = UIColor.blueColor()
-            return [customDelete]
+            return [customDelete, plusButton]
         }
     }
     
