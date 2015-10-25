@@ -12,7 +12,7 @@
 		3C2998741BC9D42600D57626 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2998721BC9D42600D57626 /* Main.storyboard */; };
 		3C2998761BC9D42600D57626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2998751BC9D42600D57626 /* Assets.xcassets */; };
 		3C2998791BC9D42600D57626 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2998771BC9D42600D57626 /* LaunchScreen.storyboard */; };
-		3C2998811BC9D5C400D57626 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2998801BC9D5C400D57626 /* TableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		3C2998811BC9D5C400D57626 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2998801BC9D5C400D57626 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,12 +56,12 @@
 		3C29986D1BC9D42600D57626 /* ContentTile */ = {
 			isa = PBXGroup;
 			children = (
+				3C2998721BC9D42600D57626 /* Main.storyboard */,
+				3C2998771BC9D42600D57626 /* LaunchScreen.storyboard */,
 				3C29986E1BC9D42600D57626 /* AppDelegate.swift */,
 				3C2998701BC9D42600D57626 /* ViewController.swift */,
 				3C2998801BC9D5C400D57626 /* TableViewCell.swift */,
-				3C2998721BC9D42600D57626 /* Main.storyboard */,
 				3C2998751BC9D42600D57626 /* Assets.xcassets */,
-				3C2998771BC9D42600D57626 /* LaunchScreen.storyboard */,
 				3C29987A1BC9D42600D57626 /* Info.plist */,
 			);
 			path = ContentTile;
@@ -287,6 +287,7 @@
 				3C29987F1BC9D42600D57626 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

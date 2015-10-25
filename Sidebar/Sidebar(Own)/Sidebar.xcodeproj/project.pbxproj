@@ -12,6 +12,12 @@
 		490086881BDBCAA3005FAD72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490086861BDBCAA3005FAD72 /* Main.storyboard */; };
 		4900868A1BDBCAA3005FAD72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490086891BDBCAA3005FAD72 /* Assets.xcassets */; };
 		4900868D1BDBCAA3005FAD72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4900868B1BDBCAA3005FAD72 /* LaunchScreen.storyboard */; };
+		49F7FC741BDC2EF300CF284F /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7FC731BDC2EF300CF284F /* SidebarViewController.swift */; };
+		49F7FC811BDC304700CF284F /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F7FC791BDC304700CF284F /* MMDrawerBarButtonItem.m */; };
+		49F7FC821BDC304700CF284F /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F7FC7B1BDC304700CF284F /* MMDrawerController.m */; };
+		49F7FC831BDC304700CF284F /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F7FC7E1BDC304700CF284F /* MMDrawerVisualState.m */; };
+		49F7FC841BDC304700CF284F /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F7FC801BDC304700CF284F /* UIViewController+MMDrawerController.m */; };
+		49F7FC881BDC561800CF284F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7FC871BDC561800CF284F /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +25,21 @@
 		490086821BDBCAA3005FAD72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		490086841BDBCAA3005FAD72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		490086871BDBCAA3005FAD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		490086891BDBCAA3005FAD72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		490086891BDBCAA3005FAD72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Sidebar/Assets.xcassets; sourceTree = "<group>"; };
 		4900868C1BDBCAA3005FAD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4900868E1BDBCAA3005FAD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4900868E1BDBCAA3005FAD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sidebar/Info.plist; sourceTree = "<group>"; };
+		49F7FC731BDC2EF300CF284F /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		49F7FC771BDC304600CF284F /* Sidebar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sidebar-Bridging-Header.h"; sourceTree = "<group>"; };
+		49F7FC781BDC304700CF284F /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		49F7FC791BDC304700CF284F /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		49F7FC7A1BDC304700CF284F /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		49F7FC7B1BDC304700CF284F /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		49F7FC7C1BDC304700CF284F /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		49F7FC7D1BDC304700CF284F /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		49F7FC7E1BDC304700CF284F /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		49F7FC7F1BDC304700CF284F /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		49F7FC801BDC304700CF284F /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		49F7FC871BDC561800CF284F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				490086811BDBCAA3005FAD72 /* Sidebar */,
+				49F7FC751BDC2FEF00CF284F /* Supporting Files */,
 				490086801BDBCAA3005FAD72 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,11 +76,38 @@
 				490086861BDBCAA3005FAD72 /* Main.storyboard */,
 				4900868B1BDBCAA3005FAD72 /* LaunchScreen.storyboard */,
 				490086821BDBCAA3005FAD72 /* AppDelegate.swift */,
+				49F7FC731BDC2EF300CF284F /* SidebarViewController.swift */,
 				490086841BDBCAA3005FAD72 /* ViewController.swift */,
+				49F7FC871BDC561800CF284F /* TableViewController.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		49F7FC751BDC2FEF00CF284F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49F7FC761BDC300C00CF284F /* AnimationSidebar */,
 				490086891BDBCAA3005FAD72 /* Assets.xcassets */,
 				4900868E1BDBCAA3005FAD72 /* Info.plist */,
 			);
-			path = Sidebar;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49F7FC761BDC300C00CF284F /* AnimationSidebar */ = {
+			isa = PBXGroup;
+			children = (
+				49F7FC781BDC304700CF284F /* MMDrawerBarButtonItem.h */,
+				49F7FC791BDC304700CF284F /* MMDrawerBarButtonItem.m */,
+				49F7FC7A1BDC304700CF284F /* MMDrawerController.h */,
+				49F7FC7B1BDC304700CF284F /* MMDrawerController.m */,
+				49F7FC7C1BDC304700CF284F /* MMDrawerController+Subclass.h */,
+				49F7FC7D1BDC304700CF284F /* MMDrawerVisualState.h */,
+				49F7FC7E1BDC304700CF284F /* MMDrawerVisualState.m */,
+				49F7FC7F1BDC304700CF284F /* UIViewController+MMDrawerController.h */,
+				49F7FC801BDC304700CF284F /* UIViewController+MMDrawerController.m */,
+				49F7FC771BDC304600CF284F /* Sidebar-Bridging-Header.h */,
+			);
+			name = AnimationSidebar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F7FC831BDC304700CF284F /* MMDrawerVisualState.m in Sources */,
 				490086851BDBCAA3005FAD72 /* ViewController.swift in Sources */,
+				49F7FC841BDC304700CF284F /* UIViewController+MMDrawerController.m in Sources */,
+				49F7FC881BDC561800CF284F /* TableViewController.swift in Sources */,
+				49F7FC821BDC304700CF284F /* MMDrawerController.m in Sources */,
+				49F7FC811BDC304700CF284F /* MMDrawerBarButtonItem.m in Sources */,
+				49F7FC741BDC2EF300CF284F /* SidebarViewController.swift in Sources */,
 				490086831BDBCAA3005FAD72 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,10 +301,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Sidebar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rospin.Sidebar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sidebar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +315,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Sidebar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rospin.Sidebar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sidebar-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +343,7 @@
 				490086931BDBCAA3005FAD72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
