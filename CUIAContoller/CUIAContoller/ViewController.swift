@@ -100,8 +100,8 @@ class ViewController: UIViewController {
     @IBAction func loginForm(sender: AnyObject) {
         let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .Alert)
         let loginAction = UIAlertAction(title: "Login", style: .Default) { (_) in
-            let loginTextField = alertController.textFields![0] as UITextField
-            let passwordTextField = alertController.textFields![1] as UITextField
+            let _ = alertController.textFields![0] as UITextField
+            let _ = alertController.textFields![1] as UITextField
             
             //loginAction(loginTextField.text, passwordTextField.text)
         }

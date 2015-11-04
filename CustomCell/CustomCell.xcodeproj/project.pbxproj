@@ -12,11 +12,11 @@
 		3C00F4951BBC8203004217B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C00F4931BBC8203004217B1 /* Main.storyboard */; };
 		3C00F4971BBC8203004217B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C00F4961BBC8203004217B1 /* Assets.xcassets */; };
 		3C00F49A1BBC8203004217B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C00F4981BBC8203004217B1 /* LaunchScreen.storyboard */; };
-		3C00F4A21BBC8412004217B1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00F4A11BBC8412004217B1 /* CustomCell.swift */; settings = {ASSET_TAGS = (); }; };
-		3C00F4A41BBC861C004217B1 /* Redactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00F4A31BBC861C004217B1 /* Redactor.swift */; settings = {ASSET_TAGS = (); }; };
-		3C00F4A61BBC8784004217B1 /* jin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3C00F4A51BBC8784004217B1 /* jin.gif */; settings = {ASSET_TAGS = (); }; };
-		3C00F4AE1BBC906A004217B1 /* genie.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C00F4AD1BBC906A004217B1 /* genie.png */; settings = {ASSET_TAGS = (); }; };
-		3C00F4B01BBC92FB004217B1 /* RedactorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00F4AF1BBC92FB004217B1 /* RedactorCard.swift */; settings = {ASSET_TAGS = (); }; };
+		3C00F4A21BBC8412004217B1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00F4A11BBC8412004217B1 /* CustomCell.swift */; };
+		3C00F4A41BBC861C004217B1 /* Redactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00F4A31BBC861C004217B1 /* Redactor.swift */; };
+		3C00F4A61BBC8784004217B1 /* jin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3C00F4A51BBC8784004217B1 /* jin.gif */; };
+		3C00F4AE1BBC906A004217B1 /* genie.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C00F4AD1BBC906A004217B1 /* genie.png */; };
+		3C00F4B01BBC92FB004217B1 /* RedactorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00F4AF1BBC92FB004217B1 /* RedactorCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,7 +110,7 @@
 				TargetAttributes = {
 					3C00F48B1BBC8203004217B1 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 4R2M8FE9U7;
+						DevelopmentTeam = 58JP37J35E;
 					};
 				};
 			};
@@ -268,10 +268,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CustomCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Tectonics.CustomCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -280,10 +282,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CustomCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Tectonics.CustomCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -306,6 +310,7 @@
 				3C00F4A01BBC8203004217B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
