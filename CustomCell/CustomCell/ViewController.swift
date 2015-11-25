@@ -26,6 +26,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func setUpRedactor() {
+        let redNon = Redactor(name: "Non", community: "First row", imageName: "jin.gif")
         let red1 = Redactor(name: "Igor Cova", community: "Tectonics", imageName: "jin.gif")
         let red2 = Redactor(name: "Jin Cox", community: "Major Auto", imageName: "genie.png")
         let red3 = Redactor(name: "Max Fray", community: "Tectonics", imageName: "jin.gif")
@@ -37,6 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let red9 = Redactor(name: "Nastya Belka", community: "Tectonics", imageName: "jin.gif")
         let red0 = Redactor(name: "Gin Dron", community: "Major Auto", imageName: "genie.png")
         
+        arrayOfRedactors.append(redNon)
         arrayOfRedactors.append(red1)
         arrayOfRedactors.append(red2)
         arrayOfRedactors.append(red3)
@@ -57,6 +59,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: CustomCell = (tableView.dequeueReusableCellWithIdentifier("cell") as? CustomCell)!
         
+        if indexPath.row == 0 {
+            let top = tableView.dequeueReusableCellWithIdentifier("Top")
+            top?.userInteractionEnabled = false
+            return top!
+        }
+        
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor.blueColor()
         } else {
@@ -65,6 +73,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let redact = arrayOfRedactors[indexPath.row]
         
         cell.setCell(redact.community, rightLabelText: redact.name, imageName: redact.imageName)
+        
         
         return cell
     }
