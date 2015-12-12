@@ -66,14 +66,13 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         imageView.image = image
         
         print("Saving")
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context: NSManagedObjectContext = appDelegate.managedObjectContext
+       // let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = AppDelegate().managedObjectContext
         
-        let newImage = NSEntityDescription.insertNewObjectForEntityForName("StoreImages", inManagedObjectContext: context)
+        let newImage = NSEntityDescription.insertNewObjectForEntityForName("StoreImages", inManagedObjectContext: context) as! StoreImages
+        
         let im = UIImageJPEGRepresentation(image, 1)
-        newImage.setValue(UIImage(data: im!), forKey: "image")
-        
-        //context.save(nil)
+        newImage.image = im
         
         print(newImage)
         print(image)
