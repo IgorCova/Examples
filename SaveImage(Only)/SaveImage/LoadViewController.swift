@@ -42,6 +42,24 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
 
     func loadImage(){
+        
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext
+        
+        //2
+        let fetchRequest = NSFetchRequest(entityName: "StoreImages")
+        
+        //3
+        do {
+            let results = try context.executeFetchRequest(fetchRequest) as! [StoreImages]
+            imageView.image  = UIImage(data: results[0].image!)
+    
+            
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+        /*
+        
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.managedObjectContext
         
@@ -54,12 +72,12 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
             let result: NSArray = try context.executeFetchRequest(request) as! [StoreImages]
         
             if result.count > 0 {
-            imageView.image = (result[0] as! NSManagedObject).valueForKey("image") as? UIImage
+                imageView.image = (result[1] as! NSManagedObject).valueForKey("image") as? UIImage
             }
         } catch {
             print("Бляяяяя")
         }
-        
+        */
     }
 /*
     func saveFalseImage() {
@@ -91,6 +109,7 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         let newImage = NSEntityDescription.insertNewObjectForEntityForName("StoreImages", inManagedObjectContext: context) as! StoreImages
         
         newImage.image = UIImageJPEGRepresentation(image, 1)
+        
         do {
             try context.save()
         } catch {
