@@ -32,15 +32,15 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        //loadImage()
+        //saveFalseImage()
+        loadImage()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    /*
+
     func loadImage(){
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.managedObjectContext
@@ -49,14 +49,34 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         request.returnsObjectsAsFaults = false
         //request.predicate = NSPredicate(format: <#T##String#>, <#T##args: CVarArgType...##CVarArgType#>)
         
-        let result: NSArray = context.executeFetchRequest(request)
+        do {
+            print("Пошлоооо")
+            let result: NSArray = try context.executeFetchRequest(request) as! [StoreImages]
         
-        if result.count > 0 {
-            imageView = (result[0] as! NSManagedObject).valueForKey("image")?.imageView
+            if result.count > 0 {
+            imageView.image = (result[0] as! NSManagedObject).valueForKey("image") as? UIImage
+            }
+        } catch {
+            print("Бляяяяя")
+        }
+        
+    }
+/*
+    func saveFalseImage() {
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext
+        let newImage = NSEntityDescription.insertNewObjectForEntityForName("StoreImages", inManagedObjectContext: context) as! StoreImages
+        
+        newImage.image = UIImageJPEGRepresentation(UIImage(named: "PICT0365.jpg")!, 1)
+        do {
+            try context.save()
+        } catch {
+            
         }
         
     }
 */
+
     
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
@@ -66,13 +86,16 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         imageView.image = image
         
         print("Saving")
-       // let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context: NSManagedObjectContext = AppDelegate().managedObjectContext
-        
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext
         let newImage = NSEntityDescription.insertNewObjectForEntityForName("StoreImages", inManagedObjectContext: context) as! StoreImages
         
-        let im = UIImageJPEGRepresentation(image, 1)
-        newImage.image = im
+        newImage.image = UIImageJPEGRepresentation(image, 1)
+        do {
+            try context.save()
+        } catch {
+            
+        }
         
         print(newImage)
         print(image)
