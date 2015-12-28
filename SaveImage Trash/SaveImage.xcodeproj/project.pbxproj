@@ -12,10 +12,12 @@
 		49104C191C098D24004B123D /* SaveImage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49104C171C098D24004B123D /* SaveImage.xcdatamodeld */; };
 		49104C1B1C098D24004B123D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49104C1A1C098D24004B123D /* Assets.xcassets */; };
 		49104C1E1C098D24004B123D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49104C1C1C098D24004B123D /* LaunchScreen.storyboard */; };
+		49104C2E1C0990EA004B123D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49104C2D1C0990EA004B123D /* TableViewController.swift */; };
+		49104C301C09948B004B123D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49104C2F1C09948B004B123D /* ViewController.swift */; };
+		49104C3C1C09A62C004B123D /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 49104C391C09A62C004B123D /* facebook.png */; };
+		49104C3E1C09A62C004B123D /* tropkillaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 49104C3B1C09A62C004B123D /* tropkillaz.png */; };
+		49104C401C09A6EF004B123D /* hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 49104C3F1C09A6EF004B123D /* hi.png */; };
 		49104C431C09B465004B123D /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49104C421C09B465004B123D /* LoadViewController.swift */; };
-		499898A71C2C91D2006225E5 /* PICT0365.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 499898A61C2C91D2006225E5 /* PICT0365.jpg */; };
-		F37F0BEA1C1CC0530071DF3B /* StoreImages+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F0BE81C1CC0530071DF3B /* StoreImages+CoreDataProperties.swift */; };
-		F37F0BEB1C1CC0530071DF3B /* StoreImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F0BE91C1CC0530071DF3B /* StoreImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +28,12 @@
 		49104C1A1C098D24004B123D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49104C1D1C098D24004B123D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49104C1F1C098D24004B123D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49104C2D1C0990EA004B123D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		49104C2F1C09948B004B123D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49104C391C09A62C004B123D /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		49104C3B1C09A62C004B123D /* tropkillaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tropkillaz.png; sourceTree = "<group>"; };
+		49104C3F1C09A6EF004B123D /* hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hi.png; sourceTree = "<group>"; };
 		49104C421C09B465004B123D /* LoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
-		499898A61C2C91D2006225E5 /* PICT0365.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PICT0365.jpg; sourceTree = "<group>"; };
-		F37F0BE81C1CC0530071DF3B /* StoreImages+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoreImages+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F37F0BE91C1CC0530071DF3B /* StoreImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,9 +50,6 @@
 		49104C041C098D23004B123D = {
 			isa = PBXGroup;
 			children = (
-				F37F0BE81C1CC0530071DF3B /* StoreImages+CoreDataProperties.swift */,
-				F37F0BE91C1CC0530071DF3B /* StoreImages.swift */,
-				499898A61C2C91D2006225E5 /* PICT0365.jpg */,
 				49104C0F1C098D24004B123D /* SaveImage */,
 				49104C0E1C098D24004B123D /* Products */,
 			);
@@ -68,9 +69,20 @@
 				49104C141C098D24004B123D /* Main.storyboard */,
 				49104C101C098D24004B123D /* AppDelegate.swift */,
 				49104C411C09A8CF004B123D /* Windows */,
+				49104C311C099B43004B123D /* Image */,
 				49104C321C099B4E004B123D /* Supporting Files */,
 			);
 			path = SaveImage;
+			sourceTree = "<group>";
+		};
+		49104C311C099B43004B123D /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				49104C391C09A62C004B123D /* facebook.png */,
+				49104C3F1C09A6EF004B123D /* hi.png */,
+				49104C3B1C09A62C004B123D /* tropkillaz.png */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 		49104C321C099B4E004B123D /* Supporting Files */ = {
@@ -87,6 +99,8 @@
 		49104C411C09A8CF004B123D /* Windows */ = {
 			isa = PBXGroup;
 			children = (
+				49104C2D1C0990EA004B123D /* TableViewController.swift */,
+				49104C2F1C09948B004B123D /* ViewController.swift */,
 				49104C421C09B465004B123D /* LoadViewController.swift */,
 			);
 			name = Windows;
@@ -124,7 +138,7 @@
 				TargetAttributes = {
 					49104C0C1C098D23004B123D = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 4R2M8FE9U7;
+						DevelopmentTeam = 58JP37J35E;
 					};
 				};
 			};
@@ -151,8 +165,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49104C401C09A6EF004B123D /* hi.png in Resources */,
+				49104C3E1C09A62C004B123D /* tropkillaz.png in Resources */,
 				49104C1E1C098D24004B123D /* LaunchScreen.storyboard in Resources */,
-				499898A71C2C91D2006225E5 /* PICT0365.jpg in Resources */,
+				49104C3C1C09A62C004B123D /* facebook.png in Resources */,
 				49104C1B1C098D24004B123D /* Assets.xcassets in Resources */,
 				49104C161C098D24004B123D /* Main.storyboard in Resources */,
 			);
@@ -166,9 +182,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				49104C431C09B465004B123D /* LoadViewController.swift in Sources */,
-				F37F0BEA1C1CC0530071DF3B /* StoreImages+CoreDataProperties.swift in Sources */,
 				49104C191C098D24004B123D /* SaveImage.xcdatamodeld in Sources */,
-				F37F0BEB1C1CC0530071DF3B /* StoreImages.swift in Sources */,
+				49104C2E1C0990EA004B123D /* TableViewController.swift in Sources */,
+				49104C301C09948B004B123D /* ViewController.swift in Sources */,
 				49104C111C098D24004B123D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +296,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SaveImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rospin.SaveImage;
@@ -292,7 +307,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SaveImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rospin.SaveImage;
@@ -319,7 +333,6 @@
 				49104C241C098D24004B123D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
