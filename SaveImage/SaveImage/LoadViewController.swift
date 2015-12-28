@@ -10,15 +10,13 @@ import UIKit
 import CoreData
 
 class LoadViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
+    let imagePicker = UIImagePickerController()
     @IBOutlet var imageView: UIImageView!
-    var imagePicker = UIImagePickerController()
     
     @IBAction func btnClicked(){
-        
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
             print("\nButton capture")
-            
             
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum;
@@ -26,13 +24,12 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
             
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //saveFalseImage()
+        
         loadImage()
     }
     
@@ -52,50 +49,13 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         //3
         do {
             let results = try context.executeFetchRequest(fetchRequest) as! [StoreImages]
-            imageView.image  = UIImage(data: results[0].image!)
-    
-            
+            if results.count > 0 {
+            imageView.image  = UIImage(data: results[results.count - 1].image!)
+            }
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
-        /*
-        
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context: NSManagedObjectContext = appDelegate.managedObjectContext
-        
-        let request = NSFetchRequest(entityName: "StoreImages")
-        request.returnsObjectsAsFaults = false
-        //request.predicate = NSPredicate(format: <#T##String#>, <#T##args: CVarArgType...##CVarArgType#>)
-        
-        do {
-            print("Пошлоооо")
-            let result: NSArray = try context.executeFetchRequest(request) as! [StoreImages]
-        
-            if result.count > 0 {
-                imageView.image = (result[1] as! NSManagedObject).valueForKey("image") as? UIImage
-            }
-        } catch {
-            print("Бляяяяя")
-        }
-        */
     }
-/*
-    func saveFalseImage() {
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context: NSManagedObjectContext = appDelegate.managedObjectContext
-        let newImage = NSEntityDescription.insertNewObjectForEntityForName("StoreImages", inManagedObjectContext: context) as! StoreImages
-        
-        newImage.image = UIImageJPEGRepresentation(UIImage(named: "PICT0365.jpg")!, 1)
-        do {
-            try context.save()
-        } catch {
-            
-        }
-        
-    }
-*/
-
-    
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
