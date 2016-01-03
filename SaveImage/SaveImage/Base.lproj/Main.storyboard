@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qP6-02-bXi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="11O-f3-NKT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -27,15 +27,72 @@
                                     <action selector="btnClicked" destination="qP6-02-bXi" eventType="touchUpInside" id="stN-0f-n4T"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAM-Cr-M5Y">
+                                <rect key="frame" x="40" y="78" width="240" height="218"/>
+                                <connections>
+                                    <segue destination="Mkb-Jr-qyZ" kind="show" id="gSW-jd-yhO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PKR-kM-iHE"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="imageView" destination="GG8-h8-yTi" id="Qhg-Aa-gmK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNS-Dw-JcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086" y="670"/>
+        </scene>
+        <!--Paged Scroll View Controller-->
+        <scene sceneID="x5t-dR-UFf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gky-sj-JWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Mkb-Jr-qyZ" customClass="PagedScrollViewController" customModule="SaveImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eAA-ac-KMg"/>
+                        <viewControllerLayoutGuide type="bottom" id="EFj-v0-qmH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7zM-S8-4Td">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gv-R5-i4J">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pHK-7k-oxo">
+                                <rect key="frame" x="20" y="531" width="280" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pageControl" destination="pHK-7k-oxo" id="ExS-bv-bLG"/>
+                        <outlet property="scrollView" destination="0Gv-R5-i4J" id="fEQ-Dw-j7h"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1605" y="670"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gbi-wF-lXv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="11O-f3-NKT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMh-h5-ZsE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qP6-02-bXi" kind="relationship" relationship="rootViewController" id="hCP-Nw-cQG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bs3-SU-Fzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="598" y="670"/>
         </scene>

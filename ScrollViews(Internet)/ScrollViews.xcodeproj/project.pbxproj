@@ -95,13 +95,13 @@
 		EE62EB23196483A800E35E03 /* ScrollViews */ = {
 			isa = PBXGroup;
 			children = (
+				EE62EB2A196483A800E35E03 /* Main.storyboard */,
+				EEBD4D341965BBB0008DB904 /* PagedScrollViewController.swift */,
 				EE62EB26196483A800E35E03 /* AppDelegate.swift */,
 				EE62EB28196483A800E35E03 /* ViewController.swift */,
 				EEBD4D321965AC88008DB904 /* CustomScrollViewController.swift */,
-				EEBD4D341965BBB0008DB904 /* PagedScrollViewController.swift */,
 				EEBA9547196DA36700B9BEE0 /* PeekPagedScrollViewController.swift */,
 				EEBA9549196DAB0C00B9BEE0 /* ScrollViewContainer.swift */,
-				EE62EB2A196483A800E35E03 /* Main.storyboard */,
 				EE62EB2D196483A800E35E03 /* Images.xcassets */,
 				EE62EB24196483A800E35E03 /* Supporting Files */,
 			);
