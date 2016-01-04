@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftSlideShow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi7-Ji-u2K">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="4AZ-Di-5ok">
+                                <rect key="frame" x="106" y="64" width="109" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DMT-AW-H3g"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Text Icon" translatesAutoresizingMaskIntoConstraints="NO" id="KsA-Bh-YDm">
+                                <rect key="frame" x="40" y="174" width="240" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="2hL-7l-d6z"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jip-0l-jdX">
+                                <rect key="frame" x="40" y="264" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-JI-2mZ">
+                                <rect key="frame" x="127" y="401" width="67" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="Zhd-gz-PtK"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.87058823529411766" green="0.20784313725490197" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTN-ef-4Ly">
+                                <rect key="frame" x="40" y="480" width="240" height="45"/>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.20784313725490197" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="cwD-PF-5R1"/>
+                                </constraints>
+                                <state key="normal" title="Let's Start">
+                                    <color key="titleColor" red="0.97937715999999997" green="1" blue="0.98014321510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hTN-ef-4Ly" secondAttribute="bottom" constant="43" id="06r-fT-hF6"/>
+                            <constraint firstItem="KsA-Bh-YDm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="06s-JM-Uax"/>
+                            <constraint firstItem="hTN-ef-4Ly" firstAttribute="centerX" secondItem="J4l-JI-2mZ" secondAttribute="centerX" id="BYz-0H-aEN"/>
+                            <constraint firstItem="hTN-ef-4Ly" firstAttribute="top" secondItem="J4l-JI-2mZ" secondAttribute="bottom" constant="42" id="EXV-bW-fMv"/>
+                            <constraint firstItem="Jip-0l-jdX" firstAttribute="trailing" secondItem="KsA-Bh-YDm" secondAttribute="trailing" id="FUZ-1q-LIU"/>
+                            <constraint firstItem="fi7-Ji-u2K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G6x-Hd-0Ng"/>
+                            <constraint firstItem="hTN-ef-4Ly" firstAttribute="trailing" secondItem="Jip-0l-jdX" secondAttribute="trailing" id="GGh-RA-nFC"/>
+                            <constraint firstItem="4AZ-Di-5ok" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="JYr-TO-lOz"/>
+                            <constraint firstItem="J4l-JI-2mZ" firstAttribute="top" secondItem="Jip-0l-jdX" secondAttribute="bottom" constant="9" id="Msk-H6-8Tv"/>
+                            <constraint firstItem="Jip-0l-jdX" firstAttribute="top" secondItem="KsA-Bh-YDm" secondAttribute="bottom" constant="24" id="NxD-m6-Ljt"/>
+                            <constraint firstItem="fi7-Ji-u2K" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="S3g-FA-iC2"/>
+                            <constraint firstAttribute="trailing" secondItem="fi7-Ji-u2K" secondAttribute="trailing" id="gfG-Gy-aLn"/>
+                            <constraint firstItem="KsA-Bh-YDm" firstAttribute="top" secondItem="4AZ-Di-5ok" secondAttribute="bottom" constant="10" id="jND-iN-CvK"/>
+                            <constraint firstItem="KsA-Bh-YDm" firstAttribute="centerX" secondItem="4AZ-Di-5ok" secondAttribute="centerX" id="jPv-Op-Vvi"/>
+                            <constraint firstItem="fi7-Ji-u2K" firstAttribute="centerX" secondItem="4AZ-Di-5ok" secondAttribute="centerX" id="uV6-qD-TVt"/>
+                            <constraint firstItem="4AZ-Di-5ok" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="uW0-ED-aD2"/>
+                            <constraint firstItem="hTN-ef-4Ly" firstAttribute="leading" secondItem="Jip-0l-jdX" secondAttribute="leading" id="udi-zs-D52"/>
+                            <constraint firstItem="fi7-Ji-u2K" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="vuE-br-Bxl"/>
+                            <constraint firstItem="KsA-Bh-YDm" firstAttribute="leading" secondItem="Jip-0l-jdX" secondAttribute="leading" id="wSW-Zx-5as"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="J4l-JI-2mZ" id="lW6-Ml-ht1"/>
+                        <outlet property="scrollView" destination="fi7-Ji-u2K" id="u6Y-su-xKR"/>
+                        <outlet property="startButton" destination="hTN-ef-4Ly" id="nBG-mZ-Fhg"/>
+                        <outlet property="textView" destination="Jip-0l-jdX" id="gwE-o3-16G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142.93333333333334" y="406.12"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon" width="182" height="204"/>
+        <image name="Text Icon" width="223" height="54"/>
+    </resources>
+</document>

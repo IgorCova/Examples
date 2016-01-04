@@ -38,7 +38,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         // 4
         let pagesScrollViewSize = scrollView.frame.size
         scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
-                
+        
         // 5
         loadVisiblePages()
     }

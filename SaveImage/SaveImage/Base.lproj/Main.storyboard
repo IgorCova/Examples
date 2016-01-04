@@ -49,7 +49,6 @@
         <!--Paged Scroll View Controller-->
         <scene sceneID="x5t-dR-UFf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gky-sj-JWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Mkb-Jr-qyZ" customClass="PagedScrollViewController" customModule="SaveImage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eAA-ac-KMg"/>
@@ -59,21 +58,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gv-R5-i4J">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
-                            </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pHK-7k-oxo">
                                 <rect key="frame" x="20" y="531" width="280" height="37"/>
                             </pageControl>
+                            <scrollView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gv-R5-i4J">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="pageControl" destination="pHK-7k-oxo" id="ExS-bv-bLG"/>
-                        <outlet property="scrollView" destination="0Gv-R5-i4J" id="fEQ-Dw-j7h"/>
+                        <outlet property="pageControl" destination="pHK-7k-oxo" id="hJ8-AN-66a"/>
+                        <outlet property="scrollView" destination="0Gv-R5-i4J" id="ztz-UC-jrG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gky-sj-JWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1605" y="670"/>
         </scene>
