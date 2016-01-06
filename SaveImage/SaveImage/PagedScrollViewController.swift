@@ -12,7 +12,7 @@ import CoreData
 class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var pageControl: UIPageControl!
+    //@IBOutlet weak var pageControl: UIPageControl!
     
     var pageImages: [UIImage] = []
     var pageViews: [UIImageView?] = []
@@ -20,109 +20,26 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 1
-        pageImages = Images() /*[UIImage(named:"photo1.png")!,
-            UIImage(named:"photo2.png")!,
-            UIImage(named:"photo3.png")!,
-            UIImage(named:"photo4.png")!,
-            UIImage(named:"photo5.png")!]
-                    */
+        scrollView.pagingEnabled = true
+        scrollView.showsHorizontalScrollIndicator = true
+        scrollView.delegate = self
+        
+        pageImages = Images()
         
         let pageCount = pageImages.count
         
-        // 2
-        pageControl.currentPage = 0
-        pageControl.numberOfPages = pageCount
-        
-        // 3
-        for _ in 1...pageCount {
-            pageViews.append(nil)
-        }
-        
-        // 4
+        //pageControl.currentPage = 0
+        //pageControl.numberOfPages = pageCount
         let pagesScrollViewSize = scrollView.frame.size
         scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
         
-        // 5
-        loadVisiblePages()
-    }
-    
-    func loadPage(page: Int) {
-        
-        if page < 0 || page >= pageImages.count {
-            // If it's outside the range of what you have to display, then do nothing
-            return
-        }
-        
-        // 1
-        if let _ = pageViews[page] {
-            // Do nothing. The view is already loaded.
-        } else {
-            // 2
-            var frame = scrollView.bounds
-            frame.origin.x = frame.size.width * CGFloat(page)
-            frame.origin.y = 0.0
+        for i in 0..<pageCount {
+            //let variableImage = self.alignmentImage(pageImages[i])
+            let variable = UIImageView(frame: CGRectMake(pagesScrollViewSize.width * CGFloat(i), 0, 320, 413))
+            variable.image = pageImages[i]
             
-            // 3
-            let newPageView = UIImageView(image: pageImages[page])
-            newPageView.contentMode = .ScaleAspectFit
-            newPageView.frame = frame
-            scrollView.addSubview(newPageView)
-            
-            // 4
-            pageViews[page] = newPageView
+            scrollView.addSubview(variable)
         }
-    }
-    
-    func purgePage(page: Int) {
-        
-        if page < 0 || page >= pageImages.count {
-            // If it's outside the range of what you have to display, then do nothing
-            return
-        }
-        
-        // Remove a page from the scroll view and reset the container array
-        if let pageView = pageViews[page] {
-            pageView.removeFromSuperview()
-            pageViews[page] = nil
-        }
-        
-    }
-    
-    func loadVisiblePages() {
-        
-        // First, determine which page is currently visible
-        let pageWidth = scrollView.frame.size.width
-        let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
-        
-        // Update the page control
-        pageControl.currentPage = page
-        
-        // Work out which pages you want to load
-        let firstPage = page - 1
-        let lastPage = page + 1
-        
-        
-        // Purge anything before the first page
-        for var index = 0; index < firstPage; ++index {
-            purgePage(index)
-        }
-        
-        // Load pages in our range
-        for var index = firstPage; index <= lastPage; ++index {
-            loadPage(index)
-        }
-        
-        // Purge anything after the last page
-        for var index = lastPage+1; index < pageImages.count; ++index {
-            purgePage(index)
-        }
-    }
-    
-    
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        // Load the pages that are now on screen
-        loadVisiblePages()
     }
     
     override func didReceiveMemoryWarning() {
@@ -135,16 +52,18 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.managedObjectContext
         
-        //2
         let fetchRequest = NSFetchRequest(entityName: "StoreImages")
         
-        //3
         var arrayImages: [UIImage] = []
         
         do {
             let results = try context.executeFetchRequest(fetchRequest) as! [StoreImages]
-            for i in 0..<results.count {
+            if results.isEmpty {
+                arrayImages.append(UIImage(named: "404.png")!)
+            } else {
+                for i in 0..<results.count {
                 arrayImages.append(UIImage(data: results[i].image!)!)
+                }
             }
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
@@ -154,4 +73,78 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         return arrayImages
     }
     
+    @IBAction func deleteImage(sender: AnyObject) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "StoreImages")
+        
+        do {
+            let fetchResult = try context.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+                    print("deleting")
+            if fetchResult.isEmpty {
+                
+            } else {
+                context.deleteObject(fetchResult[(currentPage())])
+                pageImages.removeAtIndex((currentPage()))
+            
+                do {
+                    try context.save()
+                } catch {
+                    let saveError = error as NSError
+                    print(saveError)
+                }
+            }
+        } catch {
+            print("Бля")
+        }
+        viewDidLoad()
+    }
+    
+    func currentPage () -> Int {
+        let pageWidth = scrollView.frame.size.width
+        let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
+        //self.pageControl.currentPage = page
+        print(page)
+        return page
+    }
 }
+
+        
+        
+        /*
+        let coord = appDelegate.persistentStoreCoordinator
+        let predicate = NSPredicate(format: <#T##String#>, <#T##args: CVarArgType...##CVarArgType#>)
+        fetchRequest.predicate = predicate
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try coord.executeRequest(deleteRequest, withContext: context)
+        } catch let error as NSError {
+            debugPrint(error)
+        }
+        */
+
+    
+
+
+
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        // Load the pages that are now on screen
+        //currentPage()
+    }
+/*
+    func alignmentImage(image: UIImage) -> (w: CGFloat, h: CGFloat) {
+        var tuple: (w: CGFloat, h: CGFloat) = (0, 0)
+        let imageSize = image.size
+        while imageSize.width > 320 {
+            tuple.w = imageSize.width / CGFloat(2)
+        }
+        while imageSize.height > 413 {
+            tuple.h = imageSize.height / CGFloat(2)
+        }
+        
+        return tuple
+    }
+*/
+

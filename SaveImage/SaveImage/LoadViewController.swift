@@ -43,17 +43,19 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.managedObjectContext
         
-        //2
         let fetchRequest = NSFetchRequest(entityName: "StoreImages")
         
-        //3
         do {
-            let results = try context.executeFetchRequest(fetchRequest) as! [StoreImages]
-            if results.count > 0 {
-            imageView.image  = UIImage(data: results[results.count - 1].image!)
+            let fetchResult = try context.executeFetchRequest(fetchRequest) as! [StoreImages]
+            
+            if fetchResult.isEmpty {
+                imageView.image = UIImage(named: "404.png")
+            } else {
+                imageView.image  = UIImage(data: fetchResult[fetchResult.count - 1].image!)
             }
+            
         } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
+        print("Could not fetch \(error), \(error.userInfo)")
         }
     }
     

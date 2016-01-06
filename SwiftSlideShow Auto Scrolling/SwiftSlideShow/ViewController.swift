@@ -53,7 +53,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.pageControl.currentPage = 0
         
         // Schedule a timer to auto slide to next page
-        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "moveToNextPage", userInfo: nil, repeats: false)
         
     }
     
@@ -66,12 +66,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         var slideToX = contentOffset + pageWidth
 
-        if  contentOffset + pageWidth == maxWidth{
+        if  slideToX == maxWidth{
             slideToX = 0
             // Each time you move back to the first slide, you may want to hide the button, uncomment the animation below to do so
-//            UIView.animateWithDuration(0.5, animations: { () -> Void in
-//                self.startButton.alpha = 0.0
-//            })
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.startButton.alpha = 0.0
+            })
         }
         self.scrollView.scrollRectToVisible(CGRectMake(slideToX, 0, pageWidth, CGRectGetHeight(self.scrollView.frame)), animated: true)
     }
@@ -82,6 +82,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Test the offset and calculate the current page after scrolling ends
         let pageWidth:CGFloat = CGRectGetWidth(scrollView.frame)
         let currentPage:CGFloat = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1
+        print(scrollView.contentOffset.x)
         // Change the indicator
         self.pageControl.currentPage = Int(currentPage);
         // Change the text accordingly

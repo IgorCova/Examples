@@ -20,21 +20,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GG8-h8-yTi">
                                 <rect key="frame" x="40" y="78" width="240" height="218"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAM-Cr-M5Y">
+                                <rect key="frame" x="40" y="78" width="240" height="218"/>
+                                <connections>
+                                    <segue destination="Mkb-Jr-qyZ" kind="show" id="uaJ-2r-lIf"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38B-tx-QUe">
                                 <rect key="frame" x="120" y="388" width="80" height="30"/>
-                                <state key="normal" title="Load Image"/>
+                                <state key="normal" title="Load Image">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="btnClicked" destination="qP6-02-bXi" eventType="touchUpInside" id="stN-0f-n4T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAM-Cr-M5Y">
-                                <rect key="frame" x="40" y="78" width="240" height="218"/>
-                                <connections>
-                                    <segue destination="Mkb-Jr-qyZ" kind="show" id="gSW-jd-yhO"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="PKR-kM-iHE"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -58,24 +60,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pHK-7k-oxo">
-                                <rect key="frame" x="20" y="531" width="280" height="37"/>
-                            </pageControl>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTr-cA-lTq">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="FcZ-bY-0gP"/>
+                                    <barButtonItem width="241" style="plain" systemItem="fixedSpace" id="Yb3-NV-tpk"/>
+                                    <barButtonItem systemItem="trash" id="VTz-6n-QJ3">
+                                        <connections>
+                                            <action selector="deleteImage:" destination="Mkb-Jr-qyZ" id="oaF-Sc-fjd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <scrollView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gv-R5-i4J">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="89" width="320" height="413"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fSz-qj-UXU"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="pageControl" destination="pHK-7k-oxo" id="hJ8-AN-66a"/>
-                        <outlet property="scrollView" destination="0Gv-R5-i4J" id="ztz-UC-jrG"/>
+                        <outlet property="scrollView" destination="0Gv-R5-i4J" id="qPL-jY-7o2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gky-sj-JWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605" y="670"/>
+            <point key="canvasLocation" x="1678" y="670"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gbi-wF-lXv">
@@ -97,4 +108,5 @@
             <point key="canvasLocation" x="598" y="670"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

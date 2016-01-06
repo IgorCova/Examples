@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="C3O-F2-1Ho">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C3O-F2-1Ho">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -33,7 +33,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="uTX-ux-SI9" kind="push" id="eJz-h4-Dhu"/>
+                                            <segue destination="uTX-ux-SI9" kind="show" id="eJz-h4-Dhu"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ojY-g4-1zc" style="IBUITableViewCellStyleDefault" id="BQi-YK-2Zv">
@@ -53,7 +53,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="8J7-qq-lpS" kind="push" id="i6R-r5-Azl"/>
+                                            <segue destination="8J7-qq-lpS" kind="show" id="i6R-r5-Azl"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ZKd-Oz-nSu" style="IBUITableViewCellStyleDefault" id="BLZ-ZN-z1u">
@@ -73,7 +73,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="wbg-d2-yRF" kind="push" id="Rlh-yR-Fuo"/>
+                                            <segue destination="wbg-d2-yRF" kind="show" id="Rlh-yR-Fuo"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Saa-SF-dqU" style="IBUITableViewCellStyleDefault" id="ogp-4b-zPh">
@@ -93,7 +93,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="rEQ-I0-6pd" kind="push" id="XqD-tS-2LQ"/>
+                                            <segue destination="rEQ-I0-6pd" kind="show" id="XqD-tS-2LQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -109,19 +109,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mou-ed-mEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658" y="421.26666666666665"/>
+            <point key="canvasLocation" x="1233.75" y="444.99999999999994"/>
         </scene>
         <!--Custom Scroll View Controller-->
         <scene sceneID="BCI-4c-zMh">
             <objects>
                 <viewController id="8J7-qq-lpS" customClass="CustomScrollViewController" customModule="ScrollViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZKc-TV-Lfm"/>
+                        <viewControllerLayoutGuide type="bottom" id="IK1-cb-LvL"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7oq-Sz-J2T">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fsc-wM-zjh">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-wM-zjh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="8J7-qq-lpS" id="tjH-8r-h2K"/>
                                 </connections>
@@ -137,27 +140,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NnU-DZ-QvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="671"/>
+            <point key="canvasLocation" x="2116.875" y="708.80281690140839"/>
         </scene>
         <!--Peek Paged Scroll View Controller-->
         <scene sceneID="JZa-AH-2e6">
             <objects>
                 <viewController id="rEQ-I0-6pd" customClass="PeekPagedScrollViewController" customModule="ScrollViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="spE-G3-GBt"/>
+                        <viewControllerLayoutGuide type="bottom" id="DV7-Le-i3n"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PJ3-76-oXO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="htH-ST-aeq">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="htH-ST-aeq">
                                 <rect key="frame" x="20" y="531" width="280" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
-                            <view contentMode="scaleToFill" id="wk6-Kn-Lw1" customClass="ScrollViewContainer" customModule="ScrollViews" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wk6-Kn-Lw1" customClass="ScrollViewContainer" customModule="ScrollViews" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="128" width="320" height="312"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="NYC-P4-W5o">
+                                    <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYC-P4-W5o">
                                         <rect key="frame" x="40" y="0.0" width="240" height="312"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="rEQ-I0-6pd" id="v5H-Af-PCK"/>
                                         </connections>
@@ -180,23 +184,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCA-1w-4vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1508" y="671"/>
+            <point key="canvasLocation" x="2827.5" y="708.80281690140839"/>
         </scene>
         <!--Paged Scroll View Controller-->
         <scene sceneID="8sY-tU-k7j">
             <objects>
                 <viewController id="wbg-d2-yRF" customClass="PagedScrollViewController" customModule="ScrollViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ty5-OA-ZCs"/>
+                        <viewControllerLayoutGuide type="bottom" id="MuD-R9-50J"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2hs-PP-OxY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Nji-PO-hgE">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nji-PO-hgE">
                                 <rect key="frame" x="20" y="531" width="280" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="r98-mr-Ljf">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r98-mr-Ljf">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="wbg-d2-yRF" id="7p4-GR-lmc"/>
                                 </connections>
@@ -213,19 +219,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9Z-Qi-3IZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1508" y="-25"/>
+            <point key="canvasLocation" x="2827.5" y="-26.408450704225352"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0Qb-5e-qZx">
             <objects>
                 <viewController id="uTX-ux-SI9" customClass="ViewController" customModule="ScrollViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lgc-6x-WNj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xjl-vA-SEv"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YcM-9l-0Rj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="jJM-W6-ZLA">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJM-W6-ZLA">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="uTX-ux-SI9" id="UwR-2E-wDP"/>
                                 </connections>
@@ -241,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUL-oT-KhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="-227"/>
+            <point key="canvasLocation" x="2107.5" y="-239.78873239436618"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AgB-rm-Sc7">
@@ -260,7 +269,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMN-na-Mj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196.66666666666666" y="421.26666666666665"/>
+            <point key="canvasLocation" x="368.75" y="444.99999999999994"/>
         </scene>
     </scenes>
 </document>

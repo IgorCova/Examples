@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491D81361C3B1977004C829F /* PassportDone.png in Resources */ = {isa = PBXBuildFile; fileRef = 491D81351C3B1977004C829F /* PassportDone.png */; };
 		EE62EB27196483A800E35E03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62EB26196483A800E35E03 /* AppDelegate.swift */; };
 		EE62EB29196483A800E35E03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62EB28196483A800E35E03 /* ViewController.swift */; };
 		EE62EB2C196483A800E35E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE62EB2A196483A800E35E03 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		491D81351C3B1977004C829F /* PassportDone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PassportDone.png; sourceTree = "<group>"; };
 		EE62EB21196483A800E35E03 /* ScrollViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE62EB25196483A800E35E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE62EB26196483A800E35E03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				EE62EB451964852100E35E03 /* photo3.png */,
 				EE62EB461964852100E35E03 /* photo4.png */,
 				EE62EB471964852100E35E03 /* photo5.png */,
+				491D81351C3B1977004C829F /* PassportDone.png */,
 				EE62EB481964852100E35E03 /* slow.png */,
 				EE62EB25196483A800E35E03 /* Info.plist */,
 			);
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE62EB4E1964852100E35E03 /* slow.png in Resources */,
+				491D81361C3B1977004C829F /* PassportDone.png in Resources */,
 				EE62EB4B1964852100E35E03 /* photo3.png in Resources */,
 				EE62EB491964852100E35E03 /* photo1.png in Resources */,
 				EE62EB4A1964852100E35E03 /* photo2.png in Resources */,
