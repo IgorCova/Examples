@@ -35,7 +35,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         
         for i in 0..<pageCount {
             //let variableImage = self.alignmentImage(pageImages[i])
-            let variable = UIImageView(frame: CGRectMake(pagesScrollViewSize.width * CGFloat(i), 0, pagesScrollViewSize.width, pageImages[i].size.height))
+            let variable = UIImageView(frame: CGRectMake(pagesScrollViewSize.width * CGFloat(i), 70, 320, 320))
             variable.image = pageImages[i]
             
             scrollView.addSubview(variable)
