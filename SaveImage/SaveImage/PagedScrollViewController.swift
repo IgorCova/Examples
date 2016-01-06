@@ -35,7 +35,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         
         for i in 0..<pageCount {
             //let variableImage = self.alignmentImage(pageImages[i])
-            let variable = UIImageView(frame: CGRectMake(pagesScrollViewSize.width * CGFloat(i), 96, 320, 220))
+            let variable = UIImageView(frame: CGRectMake(pagesScrollViewSize.width * CGFloat(i), 0, pagesScrollViewSize.width, pageImages[i].size.height))
             variable.image = pageImages[i]
             
             scrollView.addSubview(variable)
@@ -63,7 +63,6 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
             } else {
                 for i in 0..<results.count {
                     arrayImages.append(UIImage(data: results[i].image!)!)
-                    arrayImages.append(UIImage(data: results[i].compressedImage!)!)
                 }
             }
         } catch let error as NSError {
@@ -87,9 +86,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
             } else {
                 context.deleteObject(fetchResult[(currentPage())])
                 //context.delete(fetchResult[(currentPage())])
-                
-                //pageImages.removeAtIndex((currentPage()))
-            
+                pageImages.removeAtIndex((currentPage()))
                 do {
                     try context.save()
                 } catch {
