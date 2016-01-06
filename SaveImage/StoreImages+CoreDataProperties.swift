@@ -15,5 +15,5 @@ import CoreData
 extension StoreImages {
 
     @NSManaged var image: NSData?
-
+    @NSManaged var compressedImage: NSData?
 }

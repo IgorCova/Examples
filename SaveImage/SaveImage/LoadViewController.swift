@@ -70,7 +70,8 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         let context: NSManagedObjectContext = appDelegate.managedObjectContext
         let newImage = NSEntityDescription.insertNewObjectForEntityForName("StoreImages", inManagedObjectContext: context) as! StoreImages
         
-        newImage.image = UIImageJPEGRepresentation(image, 1)
+        newImage.image = UIImagePNGRepresentation(image)
+        newImage.compressedImage = UIImagePNGRepresentation(imageWithSize(image, size: CGSizeMake(340, 340)))
         
         do {
             try context.save()
@@ -80,5 +81,33 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         print(newImage)
         print(image)
+    }
+    
+    func imageWithSize(image: UIImage,size: CGSize)->UIImage{
+        if UIScreen.mainScreen().respondsToSelector("scale"){
+            UIGraphicsBeginImageContextWithOptions(size,false,UIScreen.mainScreen().scale);
+        }
+        else
+        {
+            UIGraphicsBeginImageContext(size);
+        }
+        
+        image.drawInRect(CGRectMake(0, 0, size.width, size.height));
+        let newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return newImage;
+    }
+    
+     func resizeImageWithAspect(image: UIImage,scaledToMaxWidth width:CGFloat,maxHeight height :CGFloat)->UIImage
+    {
+        
+        
+        //let scaleFactor =  width / height;
+        
+        
+        let newSize = CGSizeMake(width, height);
+        
+        return imageWithSize(image, size: newSize);
     }
 }
