@@ -8,10 +8,11 @@
 
 import UIKit
 import CoreData
+import Foundation
 
-class LoadViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class LoadViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, RSKImageCropViewControllerDelegate {
     
-    let imagePicker = UIImagePickerController()
+    var imagePicker = UIImagePickerController()
     @IBOutlet var imageView: UIImageView!
     
     @IBAction func btnClicked(){
@@ -19,7 +20,7 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
             print("\nButton capture")
             
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum;
+            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
             imagePicker.allowsEditing = false
             
             self.presentViewController(imagePicker, animated: true, completion: nil)
@@ -30,7 +31,7 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        loadImage()
+        loadImageFromData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,7 +39,7 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         // Dispose of any resources that can be recreated.
     }
 
-    func loadImage(){
+    func loadImageFromData(){
         
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.managedObjectContext
@@ -49,7 +50,7 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
             let fetchResult = try context.executeFetchRequest(fetchRequest) as! [StoreImages]
             
             if fetchResult.isEmpty {
-                imageView.image = UIImage(named: "404.png")
+                
             } else {
                 imageView.image  = UIImage(data: fetchResult[fetchResult.count - 1].image!)
             }
@@ -58,19 +59,41 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         print("Could not fetch \(error), \(error.userInfo)")
         }
     }
-    
+
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+        self.dismissViewControllerAnimated(false, completion: { () -> Void in
+            var imageCropVC : RSKImageCropViewController!
+            imageCropVC = RSKImageCropViewController(image: image, cropMode: RSKImageCropMode.Circle)
+            imageCropVC.rotationEnabled = true
+            imageCropVC.delegate = self
             
+            self.navigationController?.pushViewController(imageCropVC, animated: true)
         })
-        imageView.image = image
-        
+    }
+    
+    func imageCropViewController(controller: RSKImageCropViewController, didCropImage croppedImage: UIImage, usingCropRect cropRect: CGRect) {
+        saveImageToData(croppedImage)
+        self.imageView.image = croppedImage
+        self.navigationController?.popToViewController(self, animated: true)
+    }
+    
+    func imageCropViewController(controller: RSKImageCropViewController, didCropImage croppedImage: UIImage, usingCropRect cropRect: CGRect, rotationAngle: CGFloat) {
+        saveImageToData(croppedImage)
+        self.imageView.image = croppedImage
+        self.navigationController?.popToViewController(self, animated: true)
+    }
+    
+    func imageCropViewControllerDidCancelCrop(controller: RSKImageCropViewController) {
+        self.navigationController?.popToViewController(self, animated: true)
+    }
+    
+    func saveImageToData (image: UIImage) {
         print("Saving")
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.managedObjectContext
         let newImage = NSEntityDescription.insertNewObjectForEntityForName("StoreImages", inManagedObjectContext: context) as! StoreImages
         
-        newImage.image = UIImagePNGRepresentation(imageWithSize(image, size: CGSizeMake(340, 340)))
+        newImage.image = UIImagePNGRepresentation(image)//UIImagePNGRepresentation(imageWithSize(image, size: CGSizeMake(340, 340)))
         newImage.compressedImage = UIImagePNGRepresentation(imageWithSize(image, size: CGSizeMake(75, 75)))
         
         do {
@@ -78,8 +101,6 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         } catch {
             
         }
-        
-        print(newImage)
         print(image)
     }
     

@@ -8,8 +8,11 @@
 
 import UIKit
 import CoreData
+//import RSKImageCropper
 
 class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
+    
+    //var infoView: RSKImageCropper!
     
     @IBOutlet weak var scrollView: UIScrollView!
     //@IBOutlet weak var pageControl: UIPageControl!
@@ -19,6 +22,8 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setupInfoView()
         
         scrollView.pagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = true
@@ -30,6 +35,12 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         
         //pageControl.currentPage = 0
         //pageControl.numberOfPages = pageCount
+        
+        let subViews = self.scrollView.subviews
+        for subview in subViews{
+            subview.removeFromSuperview()
+        }
+        
         let pagesScrollViewSize = scrollView.frame.size
         scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
         
@@ -47,6 +58,10 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //func InfoView() {
+    //
+    //}
+    
     func Images() -> [UIImage]{
         
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -59,7 +74,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         do {
             let results = try context.executeFetchRequest(fetchRequest) as! [StoreImages]
             if results.isEmpty {
-                arrayImages.append(UIImage(named: "404.png")!)
+                self.navigationController?.popToRootViewControllerAnimated(true)
             } else {
                 for i in 0..<results.count {
                     arrayImages.append(UIImage(data: results[i].image!)!)

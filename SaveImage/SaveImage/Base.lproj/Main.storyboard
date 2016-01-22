@@ -8,7 +8,7 @@
         <!--Load View Controller-->
         <scene sceneID="rd4-4D-NeF">
             <objects>
-                <viewController id="qP6-02-bXi" customClass="LoadViewController" customModule="SaveImage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startPage" id="qP6-02-bXi" customClass="LoadViewController" customModule="SaveImage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g6n-e0-HgA"/>
                         <viewControllerLayoutGuide type="bottom" id="5cI-rx-4vE"/>
