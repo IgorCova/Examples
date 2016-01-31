@@ -14,6 +14,8 @@
 		49104C1E1C098D24004B123D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49104C1C1C098D24004B123D /* LaunchScreen.storyboard */; };
 		49104C431C09B465004B123D /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49104C421C09B465004B123D /* LoadViewController.swift */; };
 		492909521C389CAE009A1A65 /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492909511C389CAE009A1A65 /* PagedScrollViewController.swift */; };
+		49A5793C1C5DEC97006CDDFA /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5793B1C5DEC97006CDDFA /* FiltersViewController.swift */; };
+		49A5793E1C5DED64006CDDFA /* ffd.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A5793D1C5DED64006CDDFA /* ffd.png */; };
 		D63A5EDE8AF14A4CA4F87622 /* libPods-SaveImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5337C8BD36A2BF8F9480A268 /* libPods-SaveImage.a */; };
 		F37F0BEA1C1CC0530071DF3B /* StoreImages+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F0BE81C1CC0530071DF3B /* StoreImages+CoreDataProperties.swift */; };
 		F37F0BEB1C1CC0530071DF3B /* StoreImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F0BE91C1CC0530071DF3B /* StoreImages.swift */; };
@@ -30,6 +32,8 @@
 		49104C421C09B465004B123D /* LoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		492909511C389CAE009A1A65 /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
 		496A92071C52C18A00A40BE3 /* SaveImage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SaveImage-Bridging-Header.h"; sourceTree = "<group>"; };
+		49A5793B1C5DEC97006CDDFA /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		49A5793D1C5DED64006CDDFA /* ffd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ffd.png; sourceTree = "<group>"; };
 		5337C8BD36A2BF8F9480A268 /* libPods-SaveImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SaveImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8993BB9ECD1B03D7B4604953 /* Pods-SaveImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-SaveImage/Pods-SaveImage.release.xcconfig"; sourceTree = "<group>"; };
 		E37B4925A38C7EDF5E29DFDD /* Pods-SaveImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SaveImage/Pods-SaveImage.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			children = (
 				492909511C389CAE009A1A65 /* PagedScrollViewController.swift */,
 				49104C421C09B465004B123D /* LoadViewController.swift */,
+				49A5793B1C5DEC97006CDDFA /* FiltersViewController.swift */,
 			);
 			name = Windows;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 		493E0B531C3D7EDB0008E8BC /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				49A5793D1C5DED64006CDDFA /* ffd.png */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -169,7 +175,7 @@
 				TargetAttributes = {
 					49104C0C1C098D23004B123D = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 4R2M8FE9U7;
+						DevelopmentTeam = 58JP37J35E;
 					};
 				};
 			};
@@ -198,6 +204,7 @@
 			files = (
 				49104C1E1C098D24004B123D /* LaunchScreen.storyboard in Resources */,
 				49104C1B1C098D24004B123D /* Assets.xcassets in Resources */,
+				49A5793E1C5DED64006CDDFA /* ffd.png in Resources */,
 				49104C161C098D24004B123D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +266,7 @@
 			files = (
 				49104C431C09B465004B123D /* LoadViewController.swift in Sources */,
 				492909521C389CAE009A1A65 /* PagedScrollViewController.swift in Sources */,
+				49A5793C1C5DEC97006CDDFA /* FiltersViewController.swift in Sources */,
 				F37F0BEA1C1CC0530071DF3B /* StoreImages+CoreDataProperties.swift in Sources */,
 				49104C191C098D24004B123D /* SaveImage.xcdatamodeld in Sources */,
 				F37F0BEB1C1CC0530071DF3B /* StoreImages.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="11O-f3-NKT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="11O-f3-NKT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -83,7 +83,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fSz-qj-UXU"/>
+                    <navigationItem key="navigationItem" id="fSz-qj-UXU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="ubO-Od-TeR">
+                            <connections>
+                                <segue destination="Z5R-00-Sg9" kind="show" id="zbb-ip-nnn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="scrollView" destination="0Gv-R5-i4J" id="qPL-jY-7o2"/>
@@ -92,6 +98,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gky-sj-JWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1678" y="670"/>
+        </scene>
+        <!--Filters View Controller-->
+        <scene sceneID="DrG-Fd-adN">
+            <objects>
+                <viewController id="Z5R-00-Sg9" customClass="FiltersViewController" customModule="SaveImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wIQ-sp-xsF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Muc-Zh-s3K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PgL-be-dZc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5h-GU-bxf">
+                                <rect key="frame" x="0.0" y="127" width="320" height="249"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LZt-uN-AVC" appends="YES" id="tZI-Yg-0mN"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="i5h-GU-bxf" id="7d1-Ee-0kR"/>
+                        <outlet property="panGesture" destination="LZt-uN-AVC" id="KUi-r3-sZt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2eb-tf-6ge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="LZt-uN-AVC"/>
+            </objects>
+            <point key="canvasLocation" x="2135" y="670"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gbi-wF-lXv">

@@ -73,6 +73,7 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     func imageCropViewController(controller: RSKImageCropViewController, didCropImage croppedImage: UIImage, usingCropRect cropRect: CGRect) {
         saveImageToData(croppedImage)
+        croppedImage
         self.imageView.image = croppedImage
         self.navigationController?.popToViewController(self, animated: true)
     }
