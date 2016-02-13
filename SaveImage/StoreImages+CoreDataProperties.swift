@@ -16,4 +16,6 @@ extension StoreImages {
 
     @NSManaged var image: NSData?
     @NSManaged var compressedImage: NSData?
+    @NSManaged var filteredImage: NSData?
+
 }

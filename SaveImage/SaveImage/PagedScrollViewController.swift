@@ -17,7 +17,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     //@IBOutlet weak var pageControl: UIPageControl!
     
-    var pageImages: [UIImage] = []
+    var pageImages: [(image: UIImage, number: Int)] = []
     var pageViews: [UIImageView?] = []
     
     override func viewDidLoad() {
@@ -40,14 +40,14 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         for subview in subViews{
             subview.removeFromSuperview()
         }
-        
+
         let pagesScrollViewSize = scrollView.frame.size
-        scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
+        scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), 320)
         
         for i in 0..<pageCount {
             //let variableImage = self.alignmentImage(pageImages[i])
-            let variable = UIImageView(frame: CGRectMake(pagesScrollViewSize.width * CGFloat(i), 70, 320, 320))
-            variable.image = pageImages[i]
+            let variable = UIImageView(frame: CGRectMake(pagesScrollViewSize.width * CGFloat(i), 0, 320, 320))
+            variable.image = pageImages[i].image
             
             scrollView.addSubview(variable)
         }
@@ -58,23 +58,32 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func Images() -> [UIImage]{
+    func Images() -> [(image: UIImage, number: Int)]{
         
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.managedObjectContext
         
         let fetchRequest = NSFetchRequest(entityName: "StoreImages")
         
-        var arrayImages: [UIImage] = []
+        var arrayImages: [(image: UIImage, number: Int)] = []
         
         do {
             let results = try context.executeFetchRequest(fetchRequest) as! [StoreImages]
             if results.isEmpty {
                 self.navigationController?.popToRootViewControllerAnimated(true)
             } else {
+                
+                
                 for i in 0..<results.count {
-                    arrayImages.append(UIImage(data: results[i].image!)!)
+                    if results[i].filteredImage == nil {
+                        //arrayImages.append(UIImage(data: results[i].image!)!)
+                        arrayImages.insert(((UIImage(data: results[i].image!)!), i), atIndex: 0)
+                    } else {
+                        //arrayImages.append(UIImage(data: results[i].filteredImage!)!)
+                        arrayImages.insert(((UIImage(data: results[i].filteredImage!)!), i), atIndex: 0)
+                    }
                 }
+                
             }
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
@@ -84,14 +93,12 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         return arrayImages
     }
     
-    @IBAction func transferPage(sender: AnyObject) {
-        let FIltersVC = FiltersViewController()
-        let FVC = (storyboard?.instantiateViewControllerWithIdentifier("FVC"))! as UIViewController
-        self.navigationController?.pushViewController(FVC, animated: true)
-        FIltersVC.currentPage = currentPage()
-        FIltersVC.currentImage = pageImages[currentPage()]
-        print(pageImages[currentPage()])        // НЕ ПЕРЕДАЕТ
-        
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toFilters" {
+            let vc = segue.destinationViewController as? FiltersViewController
+            vc?.currentImage = pageImages[currentPage()].image
+            vc?.numberImage = pageImages[currentPage()].number
+        }
     }
     
     @IBAction func deleteImage(sender: AnyObject) {
@@ -105,9 +112,9 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
             if fetchResult.isEmpty {
                 
             } else {
-                context.deleteObject(fetchResult[(currentPage())])
+                context.deleteObject(fetchResult[pageImages[currentPage()].number])
                 //context.delete(fetchResult[(currentPage())])
-                pageImages.removeAtIndex((currentPage()))
+                //pageImages.removeAtIndex(pageImages[currentPage()].number)
                 do {
                     try context.save()
                 } catch {

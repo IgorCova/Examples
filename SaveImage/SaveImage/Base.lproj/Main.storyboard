@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="11O-f3-NKT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="11O-f3-NKT">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Load View Controller-->
@@ -18,21 +18,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GG8-h8-yTi">
-                                <rect key="frame" x="40" y="78" width="240" height="218"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAM-Cr-M5Y">
-                                <rect key="frame" x="40" y="78" width="240" height="218"/>
-                                <connections>
-                                    <segue destination="Mkb-Jr-qyZ" kind="show" id="uaJ-2r-lIf"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38B-tx-QUe">
-                                <rect key="frame" x="120" y="388" width="80" height="30"/>
+                                <rect key="frame" x="120" y="433" width="80" height="30"/>
                                 <state key="normal" title="Load Image">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="btnClicked" destination="qP6-02-bXi" eventType="touchUpInside" id="stN-0f-n4T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAM-Cr-M5Y">
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                                <connections>
+                                    <segue destination="Mkb-Jr-qyZ" kind="show" id="uaJ-2r-lIf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,7 +63,7 @@
                             <scrollView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gv-R5-i4J">
                                 <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMZ-aI-x68">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMZ-aI-x68">
                                         <rect key="frame" x="0.0" y="70" width="320" height="320"/>
                                     </imageView>
                                 </subviews>
@@ -89,8 +89,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="fSz-qj-UXU">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="ubO-Od-TeR">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="transferPage:" destination="Mkb-Jr-qyZ" id="jZI-tW-YKW"/>
+                                <segue destination="Z5R-00-Sg9" kind="show" identifier="toFilters" id="9Bs-Nw-BR4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -115,13 +116,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5h-GU-bxf">
-                                <rect key="frame" x="0.0" y="134" width="320" height="320"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="LZt-uN-AVC" appends="YES" id="tZI-Yg-0mN"/>
-                                </connections>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oTw-tq-WWh">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
@@ -157,17 +151,27 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5h-GU-bxf">
+                                <rect key="frame" x="0.0" y="134" width="320" height="320"/>
+                                <gestureRecognizers/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Zy6-a7-6p4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="oYC-Zo-Pvm">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveFilteredImage:" destination="Z5R-00-Sg9" id="XQA-MJ-YDj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="imageView" destination="i5h-GU-bxf" id="7d1-Ee-0kR"/>
-                        <outlet property="panGesture" destination="LZt-uN-AVC" id="KUi-r3-sZt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2eb-tf-6ge" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="LZt-uN-AVC"/>
             </objects>
             <point key="canvasLocation" x="2135" y="670"/>
         </scene>
@@ -180,6 +184,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMh-h5-ZsE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

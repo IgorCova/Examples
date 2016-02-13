@@ -12,27 +12,16 @@ import CoreData
 class FiltersViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet var panGesture: UIPanGestureRecognizer!
     
-    let PagedScrollVC = PagedScrollViewController()
-    var currentPage = Int()
     var currentImage = UIImage()
-    
+    var numberImage = Int()
     let context = CIContext(options: nil)
-    var extent: CGRect!
-    var scaleFactor: CGFloat!
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         imageView.image = currentImage
-        
-        //imageView.image = (PagedScrollVC.Images())[(PagedScrollVC.currentPage())].valueForKey("image") as? UIImage
-        //filter?.setDefaults()
-        //imageView.image = UIImage(CIImage: ciImage!)
-        //panGesture.addTarget(self, action: "panned")
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,70 +29,60 @@ class FiltersViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func button1(sender: AnyObject) {
-        let filter1 = CIFilter(name: "CIBoxBlur")
+    func setFilterByName(name: String) {
+        let filter = CIFilter(name: name)
         let ciImage = CIImage(image: currentImage)
-        scaleFactor = UIScreen.mainScreen().scale
-        extent = CGRectApplyAffineTransform(UIScreen.mainScreen().bounds, CGAffineTransformMakeScale(scaleFactor, scaleFactor))
-        filter1?.setValue(ciImage, forKey: kCIInputImageKey)
-        imageView.image = UIImage(CGImage: context.createCGImage((filter1?.outputImage)!, fromRect: imageView.frame))
+        filter?.setValue(ciImage, forKey: kCIInputImageKey)
+        imageView.image = UIImage(CGImage: context.createCGImage((filter?.outputImage)!, fromRect: filter!.outputImage!.extent))
+    }
+    
+    @IBAction func button1(sender: AnyObject) {
+        imageView.image = currentImage
     }
     
     @IBAction func button2(sender: AnyObject) {
-        let filter2 = CIFilter(name: "CIPhotoEffectProcess")
-        let ciImage = CIImage(image: currentImage)
-        scaleFactor = UIScreen.mainScreen().scale
-        extent = CGRectApplyAffineTransform(UIScreen.mainScreen().bounds, CGAffineTransformMakeScale(scaleFactor, scaleFactor))
-        filter2?.setValue(ciImage, forKey: kCIInputImageKey)
-        imageView.image = UIImage(CGImage: context.createCGImage((filter2?.outputImage)!, fromRect: imageView.frame))
+        setFilterByName("CIPhotoEffectProcess")
     }
     
     @IBAction func button3(sender: AnyObject) {
-        let filter3 = CIFilter(name: "CIPhotoEffectTonal")
-        let ciImage = CIImage(image: currentImage)
-        scaleFactor = UIScreen.mainScreen().scale
-        extent = CGRectApplyAffineTransform(UIScreen.mainScreen().bounds, CGAffineTransformMakeScale(scaleFactor, scaleFactor))
-        filter3?.setValue(ciImage, forKey: kCIInputImageKey)
-        imageView.image = UIImage(CGImage: context.createCGImage((filter3?.outputImage)!, fromRect: imageView.frame))
+        setFilterByName("CIPhotoEffectTonal")
     }
     
     @IBAction func button4(sender: AnyObject) {
-        let filter4 = CIFilter(name: "CIPhotoEffectInstant")
-        let ciImage = CIImage(image: currentImage)
-        //scaleFactor = UIScreen.mainScreen().scale
-        //extent = CGRectApplyAffineTransform(UIScreen.mainScreen().bounds, CGAffineTransformMakeScale(scaleFactor, scaleFactor))
-        filter4?.setValue(ciImage, forKey: kCIInputImageKey)
-        imageView.image = UIImage(CGImage: context.createCGImage((filter4?.outputImage)!, fromRect: imageView.frame))
+        setFilterByName("CIPhotoEffectInstant")
     }
     
     @IBAction func button5(sender: AnyObject) {
-        let filter5 = CIFilter(name: "CIColorInvert")
-        let ciImage = CIImage(image: currentImage)
-        scaleFactor = UIScreen.mainScreen().scale
-        extent = CGRectApplyAffineTransform(UIScreen.mainScreen().bounds, CGAffineTransformMakeScale(scaleFactor, scaleFactor))
-        filter5?.setValue(ciImage, forKey: kCIInputImageKey)
-        imageView.image = UIImage(CGImage: context.createCGImage((filter5?.outputImage)!, fromRect: imageView.frame))
+        setFilterByName("CIColorInvert")
     }
     
-/*
-    switch Filters {
-        case .Negativ:
-            return CIFilter(name: "CIColorInvert")
-        case .Film:
-            CIFilter(name: "CIColorInvert")
-    }
-*/
-/*
-    func panned(gesture: UIGestureRecognizer) {
-        let location = gesture.locationInView(imageView)
-        let x = location.x * scaleFactor
-        let y = imageView.bounds.height * scaleFactor - location.y * scaleFactor
+    @IBAction func saveFilteredImage(sender: AnyObject) {
+        print("Saving")
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext
         
-        filter?.setValue(CIVector(x: x, y: y), forKey: kCIInputImageKey)
-        imageView.image = UIImage(CGImage: context.createCGImage((filter?.outputImage)!, fromRect: extent))
+        let fetchRequest = NSFetchRequest(entityName: "StoreImages")
+                
+        do {
+            let results = try context.executeFetchRequest(fetchRequest) as! [StoreImages]
+            results[numberImage].filteredImage = UIImagePNGRepresentation(imageView.image!)
+            //Переместить как новую запись
+            
+            
+    //*****************************************//
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+            
+        }
+        
+        do {
+            try context.save()
+        } catch {
+                
+        }
+        navigationController?.popToRootViewControllerAnimated(true)
     }
-*/
-
+    
     /*
     // MARK: - Navigation
 

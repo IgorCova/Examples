@@ -94,7 +94,7 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
         let context: NSManagedObjectContext = appDelegate.managedObjectContext
         let newImage = NSEntityDescription.insertNewObjectForEntityForName("StoreImages", inManagedObjectContext: context) as! StoreImages
         
-        newImage.image = UIImagePNGRepresentation(image)//UIImagePNGRepresentation(imageWithSize(image, size: CGSizeMake(340, 340)))
+        newImage.image = UIImagePNGRepresentation(image) /*UIImagePNGRepresentation(imageWithSize(image, size: CGSizeMake(320, 320)))*/
         newImage.compressedImage = UIImagePNGRepresentation(imageWithSize(image, size: CGSizeMake(75, 75)))
         
         do {
