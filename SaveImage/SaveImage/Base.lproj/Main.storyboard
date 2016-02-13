@@ -60,18 +60,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTr-cA-lTq">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="action" id="FcZ-bY-0gP"/>
-                                    <barButtonItem width="241" style="plain" systemItem="fixedSpace" id="Yb3-NV-tpk"/>
-                                    <barButtonItem systemItem="trash" id="VTz-6n-QJ3">
-                                        <connections>
-                                            <action selector="deleteImage:" destination="Mkb-Jr-qyZ" id="oaF-Sc-fjd"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <scrollView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gv-R5-i4J">
                                 <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <subviews>
@@ -80,13 +68,29 @@
                                     </imageView>
                                 </subviews>
                             </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTr-cA-lTq">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="search" id="jWG-8g-T1w">
+                                        <connections>
+                                            <action selector="searchPage:" destination="Mkb-Jr-qyZ" id="zIt-Po-ox5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="241" style="plain" systemItem="fixedSpace" id="Yb3-NV-tpk"/>
+                                    <barButtonItem systemItem="trash" id="VTz-6n-QJ3">
+                                        <connections>
+                                            <action selector="deleteImage:" destination="Mkb-Jr-qyZ" id="oaF-Sc-fjd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="fSz-qj-UXU">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="ubO-Od-TeR">
                             <connections>
-                                <segue destination="Z5R-00-Sg9" kind="show" id="zbb-ip-nnn"/>
+                                <action selector="transferPage:" destination="Mkb-Jr-qyZ" id="jZI-tW-YKW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -102,7 +106,7 @@
         <!--Filters View Controller-->
         <scene sceneID="DrG-Fd-adN">
             <objects>
-                <viewController id="Z5R-00-Sg9" customClass="FiltersViewController" customModule="SaveImage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z5R-00-Sg9" customClass="FiltersViewController" customModule="SaveImage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wIQ-sp-xsF"/>
                         <viewControllerLayoutGuide type="bottom" id="Muc-Zh-s3K"/>
@@ -111,13 +115,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5h-GU-bxf">
-                                <rect key="frame" x="0.0" y="127" width="320" height="249"/>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5h-GU-bxf">
+                                <rect key="frame" x="0.0" y="134" width="320" height="320"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="LZt-uN-AVC" appends="YES" id="tZI-Yg-0mN"/>
                                 </connections>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oTw-tq-WWh">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem width="60" style="plain" systemItem="fixedSpace" id="4Bv-pH-8oP"/>
+                                    <barButtonItem title="1" width="19" id="6Ig-vi-QIc">
+                                        <connections>
+                                            <action selector="button1:" destination="Z5R-00-Sg9" id="0xx-hs-oa0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="cSt-Bb-ggm"/>
+                                    <barButtonItem title="2" id="r0z-qj-Jdq">
+                                        <connections>
+                                            <action selector="button2:" destination="Z5R-00-Sg9" id="Njn-BZ-WMQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="GEq-Yf-07E"/>
+                                    <barButtonItem title="3" id="leJ-A3-Izn">
+                                        <connections>
+                                            <action selector="button3:" destination="Z5R-00-Sg9" id="TC5-uH-Bo2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="14" style="plain" systemItem="fixedSpace" id="uD5-9O-6gX"/>
+                                    <barButtonItem title="4" id="tvw-eZ-ZEH">
+                                        <connections>
+                                            <action selector="button4:" destination="Z5R-00-Sg9" id="tEY-SQ-iv0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="14" style="plain" systemItem="fixedSpace" id="wmE-hG-Biv"/>
+                                    <barButtonItem title="5" id="n79-Ub-VHC">
+                                        <connections>
+                                            <action selector="button5:" destination="Z5R-00-Sg9" id="YDm-Uh-joI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

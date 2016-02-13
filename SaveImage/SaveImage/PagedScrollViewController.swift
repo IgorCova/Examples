@@ -58,10 +58,6 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    //func InfoView() {
-    //
-    //}
-    
     func Images() -> [UIImage]{
         
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -86,6 +82,16 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         }
         print(arrayImages.count)
         return arrayImages
+    }
+    
+    @IBAction func transferPage(sender: AnyObject) {
+        let FIltersVC = FiltersViewController()
+        let FVC = (storyboard?.instantiateViewControllerWithIdentifier("FVC"))! as UIViewController
+        self.navigationController?.pushViewController(FVC, animated: true)
+        FIltersVC.currentPage = currentPage()
+        FIltersVC.currentImage = pageImages[currentPage()]
+        print(pageImages[currentPage()])        // НЕ ПЕРЕДАЕТ
+        
     }
     
     @IBAction func deleteImage(sender: AnyObject) {
@@ -114,18 +120,23 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         }
         viewDidLoad()
     }
+
+    
+    @IBAction func searchPage(sender: AnyObject) {
+        let alert = UIAlertController(title: "Current Page", message: "\(currentPage())", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     
     func currentPage () -> Int {
         let pageWidth = scrollView.frame.size.width
         let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
         //self.pageControl.currentPage = page
-        print(page)
+        //print(page)
         return page
     }
 }
 
-        
-        
         /*
         let coord = appDelegate.persistentStoreCoordinator
         let predicate = NSPredicate(format: <#T##String#>, <#T##args: CVarArgType...##CVarArgType#>)
@@ -139,11 +150,6 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         }
         */
 
-    
-
-
-
-    
     func scrollViewDidScroll(scrollView: UIScrollView) {
         // Load the pages that are now on screen
         //currentPage()
