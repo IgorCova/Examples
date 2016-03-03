@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49587A371C88B8280065FDE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49587A361C88B8280065FDE9 /* AppDelegate.swift */; };
+		49587A391C88B8280065FDE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49587A381C88B8280065FDE9 /* ViewController.swift */; };
+		49587A3C1C88B8280065FDE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49587A3A1C88B8280065FDE9 /* Main.storyboard */; };
+		49587A3F1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49587A3D1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodeld */; };
+		49587A411C88B8280065FDE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49587A401C88B8280065FDE9 /* Assets.xcassets */; };
+		49587A441C88B8280065FDE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49587A421C88B8280065FDE9 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49587A331C88B8280065FDE9 /* CNContactPickerDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNContactPickerDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49587A361C88B8280065FDE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49587A381C88B8280065FDE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49587A3B1C88B8280065FDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49587A3E1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CNContactPickerDelegate.xcdatamodel; sourceTree = "<group>"; };
+		49587A401C88B8280065FDE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49587A431C88B8280065FDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49587A451C88B8280065FDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49587A301C88B8280065FDE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49587A2A1C88B8280065FDE9 = {
+			isa = PBXGroup;
+			children = (
+				49587A351C88B8280065FDE9 /* CNContactPickerDelegate */,
+				49587A341C88B8280065FDE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49587A341C88B8280065FDE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49587A331C88B8280065FDE9 /* CNContactPickerDelegate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49587A351C88B8280065FDE9 /* CNContactPickerDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				49587A3A1C88B8280065FDE9 /* Main.storyboard */,
+				49587A361C88B8280065FDE9 /* AppDelegate.swift */,
+				49587A381C88B8280065FDE9 /* ViewController.swift */,
+				49587A4B1C88B8410065FDE9 /* Supporting Files */,
+				49587A4C1C88B8680065FDE9 /* CoreData */,
+			);
+			path = CNContactPickerDelegate;
+			sourceTree = "<group>";
+		};
+		49587A4B1C88B8410065FDE9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49587A401C88B8280065FDE9 /* Assets.xcassets */,
+				49587A421C88B8280065FDE9 /* LaunchScreen.storyboard */,
+				49587A451C88B8280065FDE9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49587A4C1C88B8680065FDE9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				49587A3D1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49587A321C88B8280065FDE9 /* CNContactPickerDelegate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49587A481C88B8280065FDE9 /* Build configuration list for PBXNativeTarget "CNContactPickerDelegate" */;
+			buildPhases = (
+				49587A2F1C88B8280065FDE9 /* Sources */,
+				49587A301C88B8280065FDE9 /* Frameworks */,
+				49587A311C88B8280065FDE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CNContactPickerDelegate;
+			productName = CNContactPickerDelegate;
+			productReference = 49587A331C88B8280065FDE9 /* CNContactPickerDelegate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49587A2B1C88B8280065FDE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Andrew Dzhur";
+				TargetAttributes = {
+					49587A321C88B8280065FDE9 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 58JP37J35E;
+					};
+				};
+			};
+			buildConfigurationList = 49587A2E1C88B8280065FDE9 /* Build configuration list for PBXProject "CNContactPickerDelegate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49587A2A1C88B8280065FDE9;
+			productRefGroup = 49587A341C88B8280065FDE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49587A321C88B8280065FDE9 /* CNContactPickerDelegate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49587A311C88B8280065FDE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49587A441C88B8280065FDE9 /* LaunchScreen.storyboard in Resources */,
+				49587A411C88B8280065FDE9 /* Assets.xcassets in Resources */,
+				49587A3C1C88B8280065FDE9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49587A2F1C88B8280065FDE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49587A3F1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodeld in Sources */,
+				49587A391C88B8280065FDE9 /* ViewController.swift in Sources */,
+				49587A371C88B8280065FDE9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		49587A3A1C88B8280065FDE9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49587A3B1C88B8280065FDE9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49587A421C88B8280065FDE9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49587A431C88B8280065FDE9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49587A461C88B8280065FDE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49587A471C88B8280065FDE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49587A491C88B8280065FDE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CNContactPickerDelegate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dzhur.CNContactPickerDelegate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		49587A4A1C88B8280065FDE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CNContactPickerDelegate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Dzhur.CNContactPickerDelegate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49587A2E1C88B8280065FDE9 /* Build configuration list for PBXProject "CNContactPickerDelegate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49587A461C88B8280065FDE9 /* Debug */,
+				49587A471C88B8280065FDE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49587A481C88B8280065FDE9 /* Build configuration list for PBXNativeTarget "CNContactPickerDelegate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49587A491C88B8280065FDE9 /* Debug */,
+				49587A4A1C88B8280065FDE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		49587A3D1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				49587A3E1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodel */,
+			);
+			currentVersion = 49587A3E1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodel */;
+			path = CNContactPickerDelegate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 49587A2B1C88B8280065FDE9 /* Project object */;
+}
