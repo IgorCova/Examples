@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		499683821C8DF2F00008EEB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499683811C8DF2F00008EEB0 /* AppDelegate.swift */; };
+		499683871C8DF2F10008EEB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499683851C8DF2F10008EEB0 /* Main.storyboard */; };
+		499683891C8DF2F10008EEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499683881C8DF2F10008EEB0 /* Assets.xcassets */; };
+		4996838C1C8DF2F20008EEB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4996838A1C8DF2F20008EEB0 /* LaunchScreen.storyboard */; };
+		499683951C8DFDDE0008EEB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499683941C8DFDDE0008EEB0 /* TableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4996837E1C8DF2ED0008EEB0 /* Birthday Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birthday Picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		499683811C8DF2F00008EEB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		499683861C8DF2F10008EEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		499683881C8DF2F10008EEB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4996838B1C8DF2F20008EEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4996838D1C8DF2F20008EEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		499683941C8DFDDE0008EEB0 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4996837B1C8DF2ED0008EEB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		499683751C8DF2EC0008EEB0 = {
+			isa = PBXGroup;
+			children = (
+				499683801C8DF2EF0008EEB0 /* Birthday Picker */,
+				4996837F1C8DF2ED0008EEB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4996837F1C8DF2ED0008EEB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4996837E1C8DF2ED0008EEB0 /* Birthday Picker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		499683801C8DF2EF0008EEB0 /* Birthday Picker */ = {
+			isa = PBXGroup;
+			children = (
+				499683851C8DF2F10008EEB0 /* Main.storyboard */,
+				499683811C8DF2F00008EEB0 /* AppDelegate.swift */,
+				499683941C8DFDDE0008EEB0 /* TableViewController.swift */,
+				499683931C8DF3BF0008EEB0 /* Supporting Files */,
+			);
+			path = "Birthday Picker";
+			sourceTree = "<group>";
+		};
+		499683931C8DF3BF0008EEB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				499683881C8DF2F10008EEB0 /* Assets.xcassets */,
+				4996838A1C8DF2F20008EEB0 /* LaunchScreen.storyboard */,
+				4996838D1C8DF2F20008EEB0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4996837D1C8DF2ED0008EEB0 /* Birthday Picker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 499683901C8DF2F20008EEB0 /* Build configuration list for PBXNativeTarget "Birthday Picker" */;
+			buildPhases = (
+				4996837A1C8DF2ED0008EEB0 /* Sources */,
+				4996837B1C8DF2ED0008EEB0 /* Frameworks */,
+				4996837C1C8DF2ED0008EEB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Birthday Picker";
+			productName = "Birthday Picker";
+			productReference = 4996837E1C8DF2ED0008EEB0 /* Birthday Picker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		499683761C8DF2ED0008EEB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = AndrewDzhur;
+				TargetAttributes = {
+					4996837D1C8DF2ED0008EEB0 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 58JP37J35E;
+					};
+				};
+			};
+			buildConfigurationList = 499683791C8DF2ED0008EEB0 /* Build configuration list for PBXProject "Birthday Picker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 499683751C8DF2EC0008EEB0;
+			productRefGroup = 4996837F1C8DF2ED0008EEB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4996837D1C8DF2ED0008EEB0 /* Birthday Picker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4996837C1C8DF2ED0008EEB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4996838C1C8DF2F20008EEB0 /* LaunchScreen.storyboard in Resources */,
+				499683891C8DF2F10008EEB0 /* Assets.xcassets in Resources */,
+				499683871C8DF2F10008EEB0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4996837A1C8DF2ED0008EEB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				499683821C8DF2F00008EEB0 /* AppDelegate.swift in Sources */,
+				499683951C8DFDDE0008EEB0 /* TableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		499683851C8DF2F10008EEB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				499683861C8DF2F10008EEB0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4996838A1C8DF2F20008EEB0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4996838B1C8DF2F20008EEB0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4996838E1C8DF2F20008EEB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4996838F1C8DF2F20008EEB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		499683911C8DF2F20008EEB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Birthday Picker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Rospin.Birthday-Picker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		499683921C8DF2F20008EEB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Birthday Picker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Rospin.Birthday-Picker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		499683791C8DF2ED0008EEB0 /* Build configuration list for PBXProject "Birthday Picker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4996838E1C8DF2F20008EEB0 /* Debug */,
+				4996838F1C8DF2F20008EEB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		499683901C8DF2F20008EEB0 /* Build configuration list for PBXNativeTarget "Birthday Picker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				499683911C8DF2F20008EEB0 /* Debug */,
+				499683921C8DF2F20008EEB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 499683761C8DF2ED0008EEB0 /* Project object */;
+}
