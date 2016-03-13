@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4916B0FD1C94A7C000421CFA /* AlphabetLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4916B0FC1C94A7C000421CFA /* AlphabetLine.swift */; };
 		49587A371C88B8280065FDE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49587A361C88B8280065FDE9 /* AppDelegate.swift */; };
-		49587A391C88B8280065FDE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49587A381C88B8280065FDE9 /* ViewController.swift */; };
+		49587A391C88B8280065FDE9 /* ContactsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49587A381C88B8280065FDE9 /* ContactsTableView.swift */; };
 		49587A3C1C88B8280065FDE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49587A3A1C88B8280065FDE9 /* Main.storyboard */; };
 		49587A3F1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49587A3D1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodeld */; };
 		49587A411C88B8280065FDE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49587A401C88B8280065FDE9 /* Assets.xcassets */; };
 		49587A441C88B8280065FDE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49587A421C88B8280065FDE9 /* LaunchScreen.storyboard */; };
+		F3ADF10C1C9433F9008A722D /* CustomContactsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ADF10B1C9433F9008A722D /* CustomContactsTableView.swift */; };
+		F3ADF10E1C943933008A722D /* OriginalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ADF10D1C943933008A722D /* OriginalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4916B0FC1C94A7C000421CFA /* AlphabetLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphabetLine.swift; sourceTree = "<group>"; };
 		49587A331C88B8280065FDE9 /* CNContactPickerDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNContactPickerDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49587A361C88B8280065FDE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49587A381C88B8280065FDE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49587A381C88B8280065FDE9 /* ContactsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableView.swift; sourceTree = "<group>"; };
 		49587A3B1C88B8280065FDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49587A3E1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CNContactPickerDelegate.xcdatamodel; sourceTree = "<group>"; };
 		49587A401C88B8280065FDE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49587A431C88B8280065FDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49587A451C88B8280065FDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3ADF10B1C9433F9008A722D /* CustomContactsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomContactsTableView.swift; sourceTree = "<group>"; };
+		F3ADF10D1C943933008A722D /* OriginalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4916B0FB1C949DAB00421CFA /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				49587A381C88B8280065FDE9 /* ContactsTableView.swift */,
+				F3ADF10B1C9433F9008A722D /* CustomContactsTableView.swift */,
+				F3ADF10D1C943933008A722D /* OriginalCell.swift */,
+			);
+			name = TableViewControllers;
+			sourceTree = "<group>";
+		};
 		49587A2A1C88B8280065FDE9 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +74,8 @@
 			children = (
 				49587A3A1C88B8280065FDE9 /* Main.storyboard */,
 				49587A361C88B8280065FDE9 /* AppDelegate.swift */,
-				49587A381C88B8280065FDE9 /* ViewController.swift */,
+				4916B0FC1C94A7C000421CFA /* AlphabetLine.swift */,
+				4916B0FB1C949DAB00421CFA /* TableViewControllers */,
 				49587A4B1C88B8410065FDE9 /* Supporting Files */,
 				49587A4C1C88B8680065FDE9 /* CoreData */,
 			);
@@ -155,8 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3ADF10E1C943933008A722D /* OriginalCell.swift in Sources */,
+				F3ADF10C1C9433F9008A722D /* CustomContactsTableView.swift in Sources */,
+				4916B0FD1C94A7C000421CFA /* AlphabetLine.swift in Sources */,
 				49587A3F1C88B8280065FDE9 /* CNContactPickerDelegate.xcdatamodeld in Sources */,
-				49587A391C88B8280065FDE9 /* ViewController.swift in Sources */,
+				49587A391C88B8280065FDE9 /* ContactsTableView.swift in Sources */,
 				49587A371C88B8280065FDE9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,10 +288,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CNContactPickerDelegate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Dzhur.CNContactPickerDelegate;
+				PRODUCT_BUNDLE_IDENTIFIER = Rospin.CNContactPickerDelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -279,10 +302,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CNContactPickerDelegate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Dzhur.CNContactPickerDelegate;
+				PRODUCT_BUNDLE_IDENTIFIER = Rospin.CNContactPickerDelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -305,6 +331,7 @@
 				49587A4A1C88B8280065FDE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

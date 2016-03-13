@@ -10,7 +10,7 @@ import UIKit
 import Contacts
 import ContactsUI
 
-class ViewController: UIViewController, CNContactPickerDelegate {
+class ContactsTableView: UIViewController, CNContactPickerDelegate {
     
     var contactStore = CNContactStore()
     var updateContact = CNContact()
