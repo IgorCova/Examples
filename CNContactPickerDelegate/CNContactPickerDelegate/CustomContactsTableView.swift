@@ -46,36 +46,39 @@ class CustomContactsTableView: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let contact = contactsByAlphabet[indexPath.section].contacts[indexPath.row]
+        var cell = UITableViewCell()
         
-        if contact.phoneNumbers[0] == contactsByAlphabet[0].contacts[0].phoneNumbers[0] {
-            
-            let cell = tableView.dequeueReusableCellWithIdentifier("original")! as! OriginalCell
-            
-            var decodedimage: UIImage?
-            var phoneNumber: String?
-            
-            if let x = contact.imageData {
-                decodedimage = UIImage(data: x)
-            }
-            
-            for x in contact.phoneNumbers {
-                if x.label == CNLabelPhoneNumberiPhone {
-                    phoneNumber = (x.value as! CNPhoneNumber).stringValue
-                    break
+        for number in AlphabetLine().exceptionNumber {
+            if (contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue == number {
+                let originalCell = tableView.dequeueReusableCellWithIdentifier("original")! as! OriginalCell
+                var decodedimage: UIImage?
+                var phoneNumber: String?
+                
+                if let x = contact.imageData {
+                    decodedimage = UIImage(data: x)
                 }
+                
+                for x in contact.phoneNumbers {
+                    if x.label == CNLabelPhoneNumberiPhone {
+                        phoneNumber = (x.value as! CNPhoneNumber).stringValue
+                        break
+                    }
+                }
+                
+                originalCell.setCell("\(contact.givenName) \(contact.familyName)", image: decodedimage, detail: phoneNumber ?? "")
+                
+                cell = originalCell
+                
+            } else {
+                let contactCell = tableView.dequeueReusableCellWithIdentifier("contact")! as UITableViewCell
+                contactCell.textLabel?.text = "\(contact.givenName) \(contact.familyName)"
+                
+                cell = contactCell
             }
-            
-            cell.setCell("\(contact.givenName) \(contact.familyName)", image: decodedimage, detail: phoneNumber ?? "")
-            
-            return cell
-            
-        } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("contact")! as UITableViewCell
-            cell.textLabel?.text = "\(contact.givenName) \(contact.familyName)"
-            return cell
         }
+        
+        return cell
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

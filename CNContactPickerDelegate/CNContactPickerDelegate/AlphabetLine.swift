@@ -19,7 +19,7 @@ class AlphabetLine {
     
     var allConacts = NSMutableArray()  //[CNContact]()//NSMutableArray()
     var сontactsByAlphabet = [ContactsByAlphabet]()
-    let exceptionNames = ["Igor Cova", "Andrew Dzhur", "Дмитрий Березин", "Добрый Жук", "Андрей Кова"]
+    let exceptionNumber = ["+79253396965", "+79264308272", "+79164913669"]
     var lineAlphabet = [String]()
     
     func contactSelection(exceptionNames: [String]) {
@@ -67,17 +67,24 @@ class AlphabetLine {
                 
                 for var y = 0; y < сontactsByAlphabet[index].contacts.count; y++ {
                     let contact = сontactsByAlphabet[index].contacts[y]
-        
-                    if contact.phoneNumbers[0] == сontactsByAlphabet[1].contacts[0].phoneNumbers[0] {//CNPhoneNumber(stringValue: "+79253396965") {
-                        сontactsByAlphabet[0].contacts.append(contact)
-                        сontactsByAlphabet[index].contacts.removeAtIndex(y)
-                        //y++
-                        // break
+                    for number in exceptionNumber {
+                        if (contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue == number {
+                            /*
+                            for x in contact.phoneNumbers {
+                            if x.label == CNLabelPhoneNumberiPhone {
+                            phoneNumber = (x.value as! CNPhoneNumber).stringValue
+                            break
+                            }
+                            }
+                            */
+                            сontactsByAlphabet[0].contacts.append(contact)
+                            сontactsByAlphabet[index].contacts.removeAtIndex(y)
+                            //y++
+                        }
                     }
                 }
             }
         }
-        
     }
     
     func contactsByAlphabetDrawing() -> [ContactsByAlphabet] {
