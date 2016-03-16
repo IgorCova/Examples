@@ -50,7 +50,9 @@ class CustomContactsTableView: UITableViewController {
         var cell = UITableViewCell()
         
         for number in AlphabetLine().exceptionNumber {
-            if (contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue == number {
+            
+            if number == AlphabetLine().finishedNumber((contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue) {
+                
                 let originalCell = tableView.dequeueReusableCellWithIdentifier("original")! as! OriginalCell
                 var decodedimage: UIImage?
                 var phoneNumber: String?

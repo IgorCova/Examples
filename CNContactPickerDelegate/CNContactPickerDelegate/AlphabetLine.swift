@@ -19,19 +19,8 @@ class AlphabetLine {
     
     var allConacts = NSMutableArray()  //[CNContact]()//NSMutableArray()
     var сontactsByAlphabet = [ContactsByAlphabet]()
-    let exceptionNumber = ["+79253396965", "+79264308272", "+79164913669"]
+    let exceptionNumber = ["79253396965", "79264308272", "79164913669"]
     var lineAlphabet = [String]()
-    
-    func contactSelection(exceptionNames: [String]) {
-        requestForAllContacts()
-        for contact in allConacts {
-            for name in exceptionNames {
-                if contact.givenName == name {
-                    allConacts.removeObject(contact)
-                }
-            }
-        }
-    }
     
     func AlphabetDrawing() {
         
@@ -63,28 +52,41 @@ class AlphabetLine {
     func topSection() {
         сontactsByAlphabet.insert(ContactsByAlphabet(letter: "TOP", contacts: []), atIndex: 0)
         for var index = 0; index < сontactsByAlphabet.count; index++ {
-            if !сontactsByAlphabet[index].contacts.isEmpty {
-                
-                for var y = 0; y < сontactsByAlphabet[index].contacts.count; y++ {
-                    let contact = сontactsByAlphabet[index].contacts[y]
-                    for number in exceptionNumber {
-                        if (contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue == number {
-                            /*
-                            for x in contact.phoneNumbers {
-                            if x.label == CNLabelPhoneNumberiPhone {
-                            phoneNumber = (x.value as! CNPhoneNumber).stringValue
-                            break
-                            }
-                            }
-                            */
-                            сontactsByAlphabet[0].contacts.append(contact)
-                            сontactsByAlphabet[index].contacts.removeAtIndex(y)
-                            //y++
-                        }
+            for var y = 0; y < сontactsByAlphabet[index].contacts.count; y++ {
+                let contact = сontactsByAlphabet[index].contacts[y]
+                    
+                for number in exceptionNumber {
+                    print((contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue)
+                    print(number)
+                    print("//--------------")
+                        
+                    if number == finishedNumber((contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue)  {
+                        сontactsByAlphabet[0].contacts.append(contact)
+                        сontactsByAlphabet[index].contacts.removeAtIndex(y)
+                        print("Успешно")
                     }
                 }
             }
         }
+        сontactsByAlphabet[0].contacts.sortInPlace({$0.givenName < $1.givenName})
+        cleaner()
+    }
+    
+    func cleaner() {
+        for var index = 0; index < сontactsByAlphabet.count; index++ {
+            if сontactsByAlphabet[index].contacts.isEmpty {
+                сontactsByAlphabet.removeAtIndex(index)
+                index--
+            }
+        }
+    }
+    
+    func finishedNumber(number: String) -> String {
+        let stringArray = number.componentsSeparatedByCharactersInSet(
+            NSCharacterSet.decimalDigitCharacterSet().invertedSet)
+        let newString = stringArray.joinWithSeparator("")
+        
+        return newString
     }
     
     func contactsByAlphabetDrawing() -> [ContactsByAlphabet] {
