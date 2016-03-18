@@ -60,7 +60,7 @@ class AlphabetLine {
                     print(number)
                     print("//--------------")
                         
-                    if number == finishedNumber((contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue)  {
+                    if number == stringNumber((contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue)  {
                         сontactsByAlphabet[0].contacts.append(contact)
                         сontactsByAlphabet[index].contacts.removeAtIndex(y)
                         print("Успешно")
@@ -81,7 +81,7 @@ class AlphabetLine {
         }
     }
     
-    func finishedNumber(number: String) -> String {
+    func stringNumber(number: String) -> String {
         let stringArray = number.componentsSeparatedByCharactersInSet(
             NSCharacterSet.decimalDigitCharacterSet().invertedSet)
         let newString = stringArray.joinWithSeparator("")

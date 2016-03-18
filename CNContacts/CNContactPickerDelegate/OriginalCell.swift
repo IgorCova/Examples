@@ -22,16 +22,13 @@ class OriginalCell: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
         // Configure the view for the selected state
     }
     
-    func setCell(name: String, image: UIImage?, detail: String) {
+    func setOriginalCell(name: String, image: UIImage?, detail: String) {
         self.imageUser.image = image
         self.detailsUser.text = detail
         self.nameUser.text = name
-        //image: UIImage, detail: String,
     }
     
-
 }

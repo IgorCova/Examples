@@ -47,39 +47,33 @@ class CustomContactsTableView: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let contact = contactsByAlphabet[indexPath.section].contacts[indexPath.row]
-        var cell = UITableViewCell()
+        
         
         for number in AlphabetLine().exceptionNumber {
-            
-            if number == AlphabetLine().finishedNumber((contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue) {
-                
-                let originalCell = tableView.dequeueReusableCellWithIdentifier("original")! as! OriginalCell
-                var decodedimage: UIImage?
-                var phoneNumber: String?
-                
-                if let x = contact.imageData {
-                    decodedimage = UIImage(data: x)
-                }
-                
-                for x in contact.phoneNumbers {
-                    if x.label == CNLabelPhoneNumberiPhone {
-                        phoneNumber = (x.value as! CNPhoneNumber).stringValue
-                        break
+            for lableOfNumber in contact.phoneNumbers {
+                if number == AlphabetLine().stringNumber((lableOfNumber.value as! CNPhoneNumber).stringValue) {
+                    let originalСell = tableView.dequeueReusableCellWithIdentifier("original")! as! OriginalCell
+                    var decodedimage: UIImage?
+                    var phoneNumber: String?
+                    
+                    if let image = contact.imageData {
+                        decodedimage = UIImage(data: image)
                     }
+                
+                    for numberLables in contact.phoneNumbers {
+                        if numberLables.label == CNLabelPhoneNumberiPhone {
+                            phoneNumber = (numberLables.value as! CNPhoneNumber).stringValue
+                            break
+                        }
+                    }
+                
+                    originalСell.setOriginalCell("\(contact.givenName) \(contact.familyName)", image: decodedimage, detail: phoneNumber ?? "")
+                    return originalСell
                 }
-                
-                originalCell.setCell("\(contact.givenName) \(contact.familyName)", image: decodedimage, detail: phoneNumber ?? "")
-                
-                cell = originalCell
-                
-            } else {
-                let contactCell = tableView.dequeueReusableCellWithIdentifier("contact")! as UITableViewCell
-                contactCell.textLabel?.text = "\(contact.givenName) \(contact.familyName)"
-                
-                cell = contactCell
             }
         }
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("contact")!
+        cell.textLabel?.text = ("\(contact.givenName) \(contact.familyName)")
         return cell
     }
     
@@ -88,7 +82,7 @@ class CustomContactsTableView: UITableViewController {
             return 0
             
         } else {
-            return 21
+            return 20
         }
         
     }
