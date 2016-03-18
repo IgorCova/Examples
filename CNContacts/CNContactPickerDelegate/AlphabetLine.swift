@@ -56,14 +56,13 @@ class AlphabetLine {
                 let contact = сontactsByAlphabet[index].contacts[y]
                     
                 for number in exceptionNumber {
-                    print((contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue)
-                    print(number)
-                    print("//--------------")
-                        
-                    if number == stringNumber((contact.phoneNumbers[0].value as! CNPhoneNumber).stringValue)  {
-                        сontactsByAlphabet[0].contacts.append(contact)
-                        сontactsByAlphabet[index].contacts.removeAtIndex(y)
-                        print("Успешно")
+                    for lableNumber in contact.phoneNumbers {
+                        if number == stringNumber((lableNumber.value as! CNPhoneNumber).stringValue)  {
+                            сontactsByAlphabet[0].contacts.append(contact)
+                            сontactsByAlphabet[index].contacts.removeAtIndex(y)
+                            print("Успешно")
+                            break
+                        }
                     }
                 }
             }
