@@ -19,7 +19,7 @@ class AlphabetLine {
     
     var allConacts = NSMutableArray()  //[CNContact]()//NSMutableArray()
     var сontactsByAlphabet = [ContactsByAlphabet]()
-    let exceptionNumber = ["79253396965", "79264308272", "79164913669"]
+    let exceptionNumber = ["79264308272", "79253396965", "79164913669", "79806406454", "79672288506", "79258709392"]
     var lineAlphabet = [String]()
     
     func AlphabetDrawing() {
@@ -51,7 +51,7 @@ class AlphabetLine {
     
     func topSection() {
         сontactsByAlphabet.insert(ContactsByAlphabet(letter: "TOP", contacts: []), atIndex: 0)
-        for var index = 0; index < сontactsByAlphabet.count; index++ {
+        for var index = 1; index < сontactsByAlphabet.count; index++ {
             for var y = 0; y < сontactsByAlphabet[index].contacts.count; y++ {
                 let contact = сontactsByAlphabet[index].contacts[y]
                     
@@ -60,8 +60,8 @@ class AlphabetLine {
                         if number == stringNumber((lableNumber.value as! CNPhoneNumber).stringValue)  {
                             сontactsByAlphabet[0].contacts.append(contact)
                             сontactsByAlphabet[index].contacts.removeAtIndex(y)
+                            y--
                             print("Успешно")
-                            break
                         }
                     }
                 }
