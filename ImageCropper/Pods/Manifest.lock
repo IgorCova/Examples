@@ -1,0 +1,10 @@
+PODS:
+  - ALCameraViewController (1.1.7)
+
+DEPENDENCIES:
+  - ALCameraViewController
+
+SPEC CHECKSUMS:
+  ALCameraViewController: 15bd245a247cff0f8a038c349ac2bbe79152b686
+
+COCOAPODS: 0.39.0
