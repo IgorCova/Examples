@@ -63,7 +63,7 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
         self.dismissViewControllerAnimated(false, completion: { () -> Void in
             var imageCropVC : RSKImageCropViewController!
-            imageCropVC = RSKImageCropViewController(image: image, cropMode: RSKImageCropMode.Custom)
+            imageCropVC = RSKImageCropViewController(image: image, cropMode: RSKImageCropMode.Circle)
             imageCropVC.rotationEnabled = true
             imageCropVC.delegate = self
             
@@ -106,7 +106,7 @@ class LoadViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     
     func imageWithSize(image: UIImage,size: CGSize)->UIImage{
-        if UIScreen.mainScreen().respondsToSelector(#selector(NSDecimalNumberBehaviors.scale)){
+        if UIScreen.mainScreen().respondsToSelector("scale"){
             UIGraphicsBeginImageContextWithOptions(size,false,UIScreen.mainScreen().scale);
         }
         else
