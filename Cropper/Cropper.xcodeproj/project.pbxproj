@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		498302FB1C7A0649003F7365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498302FA1C7A0649003F7365 /* AppDelegate.swift */; };
+		498302FD1C7A0649003F7365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498302FC1C7A0649003F7365 /* ViewController.swift */; };
+		498303001C7A0649003F7365 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498302FE1C7A0649003F7365 /* Main.storyboard */; };
+		498303031C7A0649003F7365 /* Cropper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 498303011C7A0649003F7365 /* Cropper.xcdatamodeld */; };
+		498303051C7A0649003F7365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498303041C7A0649003F7365 /* Assets.xcassets */; };
+		498303081C7A0649003F7365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498303061C7A0649003F7365 /* LaunchScreen.storyboard */; };
+		498303191C7A0744003F7365 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 498303121C7A0744003F7365 /* AppDelegate.m */; };
+		4983031A1C7A0744003F7365 /* PhotoTweaksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 498303141C7A0744003F7365 /* PhotoTweaksViewController.m */; };
+		4983031B1C7A0744003F7365 /* PhotoTweakView.m in Sources */ = {isa = PBXBuildFile; fileRef = 498303161C7A0744003F7365 /* PhotoTweakView.m */; };
+		4983031C1C7A0744003F7365 /* UIColor+Tweak.m in Sources */ = {isa = PBXBuildFile; fileRef = 498303181C7A0744003F7365 /* UIColor+Tweak.m */; };
+		4983031E1C7A0871003F7365 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4983031D1C7A0871003F7365 /* main.m */; };
+		498303201C7A08B4003F7365 /* PhotoTweaks.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4983031F1C7A08B4003F7365 /* PhotoTweaks.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		498302F71C7A0648003F7365 /* Cropper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cropper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		498302FA1C7A0649003F7365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		498302FC1C7A0649003F7365 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		498302FF1C7A0649003F7365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		498303021C7A0649003F7365 /* Cropper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cropper.xcdatamodel; sourceTree = "<group>"; };
+		498303041C7A0649003F7365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		498303071C7A0649003F7365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		498303091C7A0649003F7365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		498303101C7A0744003F7365 /* Cropper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cropper-Bridging-Header.h"; sourceTree = "<group>"; };
+		498303111C7A0744003F7365 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		498303121C7A0744003F7365 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		498303131C7A0744003F7365 /* PhotoTweaksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTweaksViewController.h; sourceTree = "<group>"; };
+		498303141C7A0744003F7365 /* PhotoTweaksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTweaksViewController.m; sourceTree = "<group>"; };
+		498303151C7A0744003F7365 /* PhotoTweakView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTweakView.h; sourceTree = "<group>"; };
+		498303161C7A0744003F7365 /* PhotoTweakView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTweakView.m; sourceTree = "<group>"; };
+		498303171C7A0744003F7365 /* UIColor+Tweak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Tweak.h"; sourceTree = "<group>"; };
+		498303181C7A0744003F7365 /* UIColor+Tweak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tweak.m"; sourceTree = "<group>"; };
+		4983031D1C7A0871003F7365 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4983031F1C7A08B4003F7365 /* PhotoTweaks.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = PhotoTweaks.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		498302F41C7A0648003F7365 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		498302EE1C7A0648003F7365 = {
+			isa = PBXGroup;
+			children = (
+				4983030F1C7A0653003F7365 /* xXx */,
+				498302F91C7A0648003F7365 /* Cropper */,
+				498302F81C7A0648003F7365 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		498302F81C7A0648003F7365 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				498302F71C7A0648003F7365 /* Cropper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		498302F91C7A0648003F7365 /* Cropper */ = {
+			isa = PBXGroup;
+			children = (
+				498302FA1C7A0649003F7365 /* AppDelegate.swift */,
+				498302FC1C7A0649003F7365 /* ViewController.swift */,
+				498302FE1C7A0649003F7365 /* Main.storyboard */,
+				498303041C7A0649003F7365 /* Assets.xcassets */,
+				498303061C7A0649003F7365 /* LaunchScreen.storyboard */,
+				498303091C7A0649003F7365 /* Info.plist */,
+				498303011C7A0649003F7365 /* Cropper.xcdatamodeld */,
+			);
+			path = Cropper;
+			sourceTree = "<group>";
+		};
+		4983030F1C7A0653003F7365 /* xXx */ = {
+			isa = PBXGroup;
+			children = (
+				4983031F1C7A08B4003F7365 /* PhotoTweaks.strings */,
+				4983031D1C7A0871003F7365 /* main.m */,
+				498303111C7A0744003F7365 /* AppDelegate.h */,
+				498303121C7A0744003F7365 /* AppDelegate.m */,
+				498303131C7A0744003F7365 /* PhotoTweaksViewController.h */,
+				498303141C7A0744003F7365 /* PhotoTweaksViewController.m */,
+				498303151C7A0744003F7365 /* PhotoTweakView.h */,
+				498303161C7A0744003F7365 /* PhotoTweakView.m */,
+				498303171C7A0744003F7365 /* UIColor+Tweak.h */,
+				498303181C7A0744003F7365 /* UIColor+Tweak.m */,
+				498303101C7A0744003F7365 /* Cropper-Bridging-Header.h */,
+			);
+			name = xXx;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		498302F61C7A0648003F7365 /* Cropper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4983030C1C7A0649003F7365 /* Build configuration list for PBXNativeTarget "Cropper" */;
+			buildPhases = (
+				498302F31C7A0648003F7365 /* Sources */,
+				498302F41C7A0648003F7365 /* Frameworks */,
+				498302F51C7A0648003F7365 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cropper;
+			productName = Cropper;
+			productReference = 498302F71C7A0648003F7365 /* Cropper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		498302EF1C7A0648003F7365 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = AndrewDzhur;
+				TargetAttributes = {
+					498302F61C7A0648003F7365 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 58JP37J35E;
+					};
+				};
+			};
+			buildConfigurationList = 498302F21C7A0648003F7365 /* Build configuration list for PBXProject "Cropper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 498302EE1C7A0648003F7365;
+			productRefGroup = 498302F81C7A0648003F7365 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				498302F61C7A0648003F7365 /* Cropper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		498302F51C7A0648003F7365 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				498303201C7A08B4003F7365 /* PhotoTweaks.strings in Resources */,
+				498303081C7A0649003F7365 /* LaunchScreen.storyboard in Resources */,
+				498303051C7A0649003F7365 /* Assets.xcassets in Resources */,
+				498303001C7A0649003F7365 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		498302F31C7A0648003F7365 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				498303191C7A0744003F7365 /* AppDelegate.m in Sources */,
+				498302FD1C7A0649003F7365 /* ViewController.swift in Sources */,
+				4983031C1C7A0744003F7365 /* UIColor+Tweak.m in Sources */,
+				498302FB1C7A0649003F7365 /* AppDelegate.swift in Sources */,
+				498303031C7A0649003F7365 /* Cropper.xcdatamodeld in Sources */,
+				4983031B1C7A0744003F7365 /* PhotoTweakView.m in Sources */,
+				4983031E1C7A0871003F7365 /* main.m in Sources */,
+				4983031A1C7A0744003F7365 /* PhotoTweaksViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		498302FE1C7A0649003F7365 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				498302FF1C7A0649003F7365 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		498303061C7A0649003F7365 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				498303071C7A0649003F7365 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4983030A1C7A0649003F7365 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4983030B1C7A0649003F7365 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4983030D1C7A0649003F7365 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Cropper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Rospin.Cropper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cropper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4983030E1C7A0649003F7365 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Cropper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Rospin.Cropper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cropper-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		498302F21C7A0648003F7365 /* Build configuration list for PBXProject "Cropper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4983030A1C7A0649003F7365 /* Debug */,
+				4983030B1C7A0649003F7365 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4983030C1C7A0649003F7365 /* Build configuration list for PBXNativeTarget "Cropper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4983030D1C7A0649003F7365 /* Debug */,
+				4983030E1C7A0649003F7365 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		498303011C7A0649003F7365 /* Cropper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				498303021C7A0649003F7365 /* Cropper.xcdatamodel */,
+			);
+			currentVersion = 498303021C7A0649003F7365 /* Cropper.xcdatamodel */;
+			path = Cropper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 498302EF1C7A0648003F7365 /* Project object */;
+}

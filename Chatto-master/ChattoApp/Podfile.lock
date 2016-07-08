@@ -1,0 +1,20 @@
+PODS:
+  - Chatto (1.0.0)
+  - ChattoAdditions (1.0.0):
+    - Chatto
+
+DEPENDENCIES:
+  - Chatto (from `..`)
+  - ChattoAdditions (from `..`)
+
+EXTERNAL SOURCES:
+  Chatto:
+    :path: ".."
+  ChattoAdditions:
+    :path: ".."
+
+SPEC CHECKSUMS:
+  Chatto: 531b14bbb7d21dfc50a86fc4ff70a90367171403
+  ChattoAdditions: 27c7b59f4c1b1d51d5f37c7199164982fcc59edf
+
+COCOAPODS: 0.39.0
