@@ -129,7 +129,7 @@ extension ViewController: NSOutlineViewDelegate {
     //1
     if let feed = item as? Feed {
       if tableColumn?.identifier == "DateColumn" {
-        view = outlineView.makeViewWithIdentifier("DateCell", owner: self) as? NSTableCellView
+        view = outlineView.makeViewWithIdentifier("FeedCell", owner: self) as? NSTableCellView
         if let textField = view?.textField {
           textField.stringValue = ""
           textField.sizeToFit()
@@ -145,7 +145,7 @@ extension ViewController: NSOutlineViewDelegate {
       //1
       if tableColumn?.identifier == "DateColumn" {
         //2
-        view = outlineView.makeViewWithIdentifier("DateCell", owner: self) as? NSTableCellView
+        view = outlineView.makeViewWithIdentifier("FeedCell", owner: self) as? NSTableCellView
         
         if let textField = view?.textField {
           //3
@@ -154,7 +154,7 @@ extension ViewController: NSOutlineViewDelegate {
         }
       } else {
         //4
-        view = outlineView.makeViewWithIdentifier("FeedItemCell", owner: self) as? NSTableCellView
+        view = outlineView.makeViewWithIdentifier("FeedCell", owner: self) as? NSTableCellView
         if let textField = view?.textField {
           //5
           textField.stringValue = feedItem.title
