@@ -682,26 +682,13 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="planet" id="Pha-zF-s19"/>
                             </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-Yk-jtL">
-                                <rect key="frame" x="178" y="111" width="77" height="43"/>
+                                <rect key="frame" x="178" y="118" width="77" height="32"/>
                                 <buttonCell key="cell" type="push" title="Blur" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jvw-py-YLx">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="blurAction:" target="XfG-lQ-9wD" id="LzC-ns-z9H"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hsa-EA-gsj">
-                                <rect key="frame" x="335" y="117" width="82" height="32"/>
-                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uQt-1b-0jk">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent" base64-UTF8="YES">
-Gw
-</string>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="cancelAction:" target="XfG-lQ-9wD" id="MGM-Ct-TuL"/>
                                 </connections>
                             </button>
                         </subviews>

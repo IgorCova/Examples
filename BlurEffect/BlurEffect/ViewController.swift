@@ -7,11 +7,6 @@
 //
 
 import Cocoa
-import AppKit
-import Foundation
-import CoreGraphics
-import CoreImage
-
 
 class ViewController: NSViewController {
 
@@ -22,8 +17,6 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         self.view.wantsLayer = true
         self.imageView.wantsLayer = true
-
-        // Do any additional setup after loading the view.
     }
 
     override var representedObject: AnyObject? {
@@ -33,25 +26,18 @@ class ViewController: NSViewController {
     }
 
     @IBAction func blurAction(sender: AnyObject) {
-//        let blurEffect = 
-//        let blurView = NSVisualEffectView(coder: NSCoder )
-//        imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        
-        let blurryView = NSVisualEffectView(frame: NSRect(x: 0, y: 0, width: 300, height: 300))
+        let blurryView = NSVisualEffectView(frame: self.view.frame)
         blurryView.blendingMode = NSVisualEffectBlendingMode.WithinWindow
         blurryView.material = NSVisualEffectMaterial.Dark
         blurryView.state = NSVisualEffectState.Active
-
-        self.view.addSubview(blurryView)
         
-//        self.view.addSubview(blurryView, positioned: .Above, relativeTo: blurButton.layer)
+        NSAnimationContext.runAnimationGroup({ (context) in
+            context.duration = 0.5
+            self.view.animator().addSubview(blurryView)
+            }) {
+                blurryView.animator().removeFromSuperview()
 
-        
-
-    }
-    @IBAction func cancelAction(sender: AnyObject) {
-//        self.blurButton.removeFromSuperview()
-        self.view.subviews.removeLast()
+        }
     }
 }
 
