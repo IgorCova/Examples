@@ -9,14 +9,16 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
-    @IBOutlet var blurButton: NSButton!
-    @IBOutlet var imageView: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.wantsLayer = true
-        self.imageView.wantsLayer = true
+    }
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        blurEffect()
+
     }
 
     override var representedObject: AnyObject? {
@@ -25,14 +27,14 @@ class ViewController: NSViewController {
         }
     }
 
-    @IBAction func blurAction(sender: AnyObject) {
+    func blurEffect() {
         let blurryView = NSVisualEffectView(frame: self.view.frame)
         blurryView.blendingMode = NSVisualEffectBlendingMode.WithinWindow
         blurryView.material = NSVisualEffectMaterial.Dark
         blurryView.state = NSVisualEffectState.Active
         
         NSAnimationContext.runAnimationGroup({ (context) in
-            context.duration = 0.5
+            context.duration = 1
             self.view.animator().addSubview(blurryView)
             }) {
                 blurryView.animator().removeFromSuperview()
